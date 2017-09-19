@@ -15,6 +15,8 @@
 ### Opening Slides in Mobile/Tablet:
 All the slides are available in web format and PDF format. To open the slides in your mobile/tablet just copy all the contents of **"Code-Empire-PDF"** folder to your mobile/tablet.
 
+---
+
 ## The Course Structure
 
 The Code Empire Program is scheduled to be completed in a matter of 150 days. We have made it as a great.
@@ -119,7 +121,7 @@ The Code Empire Program is scheduled to be completed in a matter of 150 days. We
 
 # Certificates:
 
-After having Completed each of the programs you will receive a certain certificate of recognition. You will be eligible for jobs with a wonderful resume and extra-preps.
+After having Completed each of the programs you will receive a certain certificate of recognition. You will be eligible for jobs with a wonderful resume and apps to showcase.
 
 From zero to hero in Programming. Code Empire is a non-profit organization that makes it possible in a wonderful manner.
 
