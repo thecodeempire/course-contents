@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Introduction to Code Empire">
+    <meta name="author" content="Himujjal">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Git and GitHub</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/sky.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style>
+        h3 {
+            color: #0078ad !important;
+        }
+
+        .special {
+            color: #0078ad;
+            font-weight: bolder !important;
+        }
+
+        .code {
+            background: #3f3f3f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <div style="position:absolute;top:10px;left:10px;z-index:999;">
+        <a href="#">
+            <span>
+                    <img height="70px" width="auto" src="images/CE.jpg" alt="Logo"/>
+            </span>
+           
+        </a>
+    </div>
+
+    <!-- The Slides start here -->
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide -->
+            <section>
+                <h2>GIT & GITHUB <span class="special"> (DAY 2) </span></h2>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Using GitHub to upload your files/code to the cloud</h3>
+                    <p style="font-size:0.8em;">We shall now see how we can use Github to save our files or programs over the internet or popularly called
+                        <span class="special">Cloud</span></p>
+                    <p style="font-size:0.8em;" class="fragment">Github is an online platform where we can store all our code and files in the cloud and download them
+                        to our local computer. Remember we created a Github Account in the very first lesson.
+                    </p>
+                    <p style="font-size:0.8em;" class="fragment">
+                        From now on we will save all our files that we create to Github. We will also see how to create a documentation.
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <h3>HELP</h3>
+                <p>For any kind of Help regarding <span class="special">Git and Github</span> Lesson don't hesitate to ask them
+                    on <a href="https://gitter.im/The-Code-Empire-Help/BASICS-environment-setup">The Code Empire Gitter Basics Help.</a>                    </p>
+            </section>
+
+            <!-- Slide -->
+            <section>
+                <section>
+                    <h3>Command Line Basics</h3>
+                    <p>Developers use command line a lot and thus we will too. This will be a short introduction to using Command
+                        Line.
+                    </p>
+                    <a class="navigate-down special" href="#/1">Click here to see basic Command Line instructions</a>
+                </section>
+                <section>
+                    <h4>Opening the Command Line</h4>
+                    <p>To open the command within any folder, just right click anywhere inside a folder and then select:</p>
+                    <ul>
+                        <li><span class="special">Cmder here</span> if you are on Windows</li>
+                        <li><span class="special">Open in terminal</span> if you are on MAC/Linux</li>
+                    </ul>
+                    <small class="navigate-down special" href="#/1">Click here to for futher lessons</small>
+                </section>
+                <section>
+                    <h4>Folder Commands in Terminal/Command Line</h4>
+                    <p>Let's make a folder for all our files we will create in Command Line:</p>
+                    <p class="fragment">Open Command Line using the instructions above and then type <code class="hljs" style="word-wrap: break-word;">mkdir the-code-empire</code>                        and press ENTER.</p>
+                    <p class="fragment">Congratulations! You just created a new folder named <span class="special">code-empire</span> using
+                        <code class="hljs">mkdir</code> command.</p>
+
+                    <small class="fragment navigate-down special" href="#/1">Click here to for futher lessons</small>
+                </section>
+                <section>
+                    <h4>Navigating inside a folder.</h4>
+                    <p>As a programmer, we don't name our files and folder with spaces. This is very convenient</p>
+                    <p class="fragment">Keeping the command line open, now type <code class="hljs" style="word-wrap: break-word;">cd the-code-empire</code>                        and hit ENTER</p>
+                    <p class="fragment">That's it we navigated into the folder in command line. <code class="code">cd</code> is for navigating
+                        between folders.</p>
+                    <p class="fragment">We can go back one folder up using: <code class="hljs" style="word-wrap: break-word;">cd ..</code></p>
+                </section>
+
+            </section>
+
+            <!-- Slide -->
+
+            <section>
+                <section>
+                    <h3>Git Introduction</h3>
+                    <img src="images/git.png" width="10%" alt="Chrome Icon" style="border-style:none;" />
+                    <p>Git is a super weapon to carry around for developers. It manages your coding projects and files and help
+                        them to be connected to the GitHub/BitBucket etc. It is a version control system. Helps you configure
+                        the version of your project.
+                    </p>
+                    <small>Click <span class="navigate-down special" href="#/1">here</span> to see what is a version.</small>
+                </section>
+                <section>
+                    <h4>What is a version?</h4>
+                    <p>A version is the number/character given to a particular project/software/hardware which tells us how
+                        many times the creator have updated it.
+                    </p>
+                    <p class="fragment">With every update on a software/hardware comes new features. Every update increases the version no. of
+                        a project .</p>
+                    <p class="fragment">Git helps us in controlling changes and versions of our projects</p>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h3>Git Tutorial - 1</h3>
+                    <p>
+                        Let’s Start using Git and make our first repository in Github
+                    </p>
+                    <ol>
+                        <li>Open the <code class="special">the-code-empire</code> folder. Try it with command line.</li>
+                        <li>Now once inside the folder in command line type: <code class="hljs" style="word-wrap: break-word;">mkdir 1-git-turial</code></li>
+                        <li>Hit Enter and then type again:<code class="hljs" style="word-wrap: break-word;">cd 1-git-tutorial</code></li>
+                    </ol>
+                    <small><a class="navigate-down special" href="#/1">Go down for further instructions:</a> </small>
+                </section>
+                <section>
+                    <p>4. Next type <code class="code">git init</code></p>
+                    <small>This will make the folder compatible to be used with Git. Make this a habit.</small>
+                    <br>
+                    <p>There you go. A new Git repository is created.</p>
+                    <p>In Github and Git every project is called as <span class="special">repository</span>.</p>
+                    <p><span class="special">1-git-tutorial</span> is our first repository/project</p>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h3>Git Tutorial 2</h3>
+                    <p>
+                        Let us start with Documentation using a special writing format named <span class="special">Markdown</span>
+                    </p>
+                    <p class="fragment">
+                        Every project we make needs a description. A description about what the project is about, how to use it and how to install
+                        the project. This description is called <span class="special">documentation</span>
+                    </p>
+                    <small class="fragment">Go <a class="navigate-down special" href="#/1">down</a> to see how to write a Markdown file and document
+                         our <span class="special">1-git-tutorial</span> repository.</small>
+                </section>
+                <section>
+                    <h4>Writing a new Markdown File:</h4>
+                    <p>Let's write a new <span class="special">markdown</span> file and <span class="special">document</span>                        our <span class="special">1-git-tutorial</span> project</p>
+                    <p>Most of the documentation is written in a file named <span class="special">README.md</span> which is
+                        then kept at the root of the repository/project. This <span class="special">README.md</span> is used
+                        to know about the project. So write it nicely!</p>
+                    <a class="fragment navigate-down">Go down to the next slide</a>
+                </section>
+                <section>
+                    <h4>Writing Markdown</h4>
+                    <p>1. Inside the folder in the window, right click anywhere and then click on <span class="special">Open with Code</span>.
+                        This will open the repository in Visual Studio Code.</p>
+                    <p>2. Then right click on the <span class="special">Explorer</span> Pane of VS Codea and click <span class="special">New File</span></p>
+                    <img src="images/vscode.png" alt="VSCode">
+                </section>
+                <section>
+                    <p>3. Rename the file as <span class="special">README.md</span>. <code>.md</code> basically represents a markdown file.</p>
+                    <p>4. The File will spring on the Right Side. Simply write the following on the Right Pane:</p>
+                    <code class="code"># The Code Empire Git Tutorial</code>
+                    <p>5. Press <span class="special">Cntrl + S</span> to save your file.</p>
+                    <p>6. To preview how it looks like simply press. <code class="code">Ctrl + K</code>. Release the <span class="special">Ctrl</span></p>                       key and press <code>V</code>.</p>
+                    <small><a class="fragment navigate-down">Go down to see the final Preview </a></small>
+                </section>
+                <section>
+                    <img src="images/vscode2.png" alt="VSCode 2">
+                    <p>On the right is a screen with the letters <span class="special">The Code Empire Git Tutorial</span> written in large format. </p>
+                </section>
+                <section>
+                    <p>When we wrote <code class="code"># The Code Empire Git Tutorial</code> it basically converted
+                    all the contents after <code class="code">#</code> to a large size</p>
+                    <p>Similarly adding <code class="code">##</code> or <code class="code">###</code> will change it to 
+                    further smaller size.</p>
+                    <p>Try it out!</p>
+                    <p> Let's add some more text to the documentation.</p>
+                </section>
+                <section>
+                    <p>Add the following to the README.md file on the right window.</p>
+                    <code class="hljs" style="word-wrap: break-word; text-align:left;">
+                        # The Code Empire Git Tutorial <br>
+                        ## Writing a documentation with Markdown<br>
+                        I did the following in this tutorial:<br>
+                        1. Making a markdown.<br>
+                        2. Uploading this repo on Github.<br>
+                    </code>
+                    <p>And then save the file with <span class="special">Ctrl + S</span></p>
+                    <p>The file is ready to be uploaded to Github now. Let's do it!</p>
+                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+                </section>
+            </section>
+
+            <!-- 7z installation -->
+            <section>
+                <section>
+                    <h3>Creating a Github Repository</h3>
+                    <p>Let's Create a new Github Repository.</p>
+                    <ol>
+                        <li>Open <a href="www.github.com">Github.com</a> and click on <button style="background:green;color:white;font-size:0.6em;border:none;padding:0.5em;border-radius:5px;">New repository</button>
+                        on the Right of your screen.</li>
+                        <li>In the next scren, give the repository name as <span class="special">1-git-tutorial</span></li>
+                        <li>Add a description if you would like to</li>
+                        <li>Click on <button style="background:green;color:white;font-size:0.6em;padding:0.5em;border-radius:5px;border:none;">Create repository</button> at the end of the screen</li>
+                    </ol>
+                    <p>Congratulations! You just created a new Github repository. Let's upload our files now.</p>
+                </section>
+                <section>
+                    <h3>Uploading files to Github</h3>
+                    <ol style="font-size:0.8em;">
+                        <li>Now simply copy the URL of your from the top of your screen ( Url bar ). Something like <span class="special">https://github.com/__your_name__/1-git-tutorial</span></li>
+                        <li class="fragment">Open your <span class="special">1-git-tutorial</span> folder in command line.
+                            <small >From now if I say open a folder in command Line. Simply right click anywhere in the folder and click on <span class="special">Open in Cmder</span> or <span class="special">Open in terminal</span></small></li>
+                        <li class="fragment">Run the following commands one by one in Command Line:</li>
+                        <code class="code fragment" style="text-align:left;">
+                            git add .<br>
+                            git commit -m "Your message for this upload ( Give anything here ) "<br>
+                            git remote add origin (Paste_your_url_here )<br>
+                            git push origin master
+                        </code>
+                        <li class="fragment">That's it. You just uploaded your files to Github. Now refresh the page in your browser to see the changes.</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Explanation of the git commands:</h3>
+                    <ol>
+                        <li><code class="code">git add .</code>: This basically reviews all the files that are to updated.</li>
+                        <li><code class="code">git commit -m ""</code>: This says I have made the files and nowI am ready to upload</li>
+                        <li><code class="code">git remote add origin ...</code>: This connects your local repo to your github repo. Just connects not upload.</li>
+                        <li><code class="code">git push origin master</code>: This uploads your files to Github. </li>
+                    </ol>
+                </section>
+            </section>
+
+            <!-- CMDER Installation -->
+            <section>
+                <section>
+                    <h3>Using the Git GUI</h3>
+                    <p  style="font-size:0.6em;">
+                        Remembering all those command line commands is a pain. Let's use the Git GUI software for uploading to Github.
+                    </p>
+                    <ol style="font-size:0.7em;">
+                        <li class="fragment">First make a small change in the README.md file. Any change you wish.</li>
+                        <li class="fragment">Then in the folder <code class="code">1-git-tutorial</code> simply right click and select <span class="special">Git GUI here</span></li>
+                        <li class="fragment">A new window opens up. Press the <button style="font-size:0.6em;">Stage Changed</button> button. This will simply see what are the new files you added</li>
+                        <li class="fragment">Then press <button style="font-size:0.6em;">Commit</button> button. </li>
+                        <li class="fragment">Then from top of that window, select <span class="special">Remote</span> and then <span class="special">Add..</span> </li>
+                        <li class="fragment">Paste the URL you copied in the Location space. Add any name and press <span class="special">Add</span></li>
+                        <li class="fragment">That's it. Now click on <button style="font-size:0.6em;">Push</button> below the <button style="font-size:0.6em;">Commit</button> button.</li>
+                    </ol>
+                </section>
+                <section>
+                    <p>Step 3, 4 & 5:</p>
+                        <img src="images/git 1.jpg" alt="">
+                   
+                </section>
+                <section>
+                        <p>Step 6 :</p>
+                        <img src="images/git 2.jpg" alt="">
+                </section>
+                <section>
+                        <h3>Video Tutorial on how to Publish files to Github.</h3>
+                </section>
+            </section>
+
+            <section>
+                <h3>Exercise</h3>
+                <p style="font-size:0.6em;">If you have done the previous task then do this exercise:</p>
+                <ol style="font-size:0.7em;">
+                    <li> Create a new repository named “2-html-css-code-empire” in Github and a new folder named 
+                        <span class="special">2-html-css-code-empire</span> inside <span class="special">the-code-empire</span></li>
+                    <li>Create a blank README.md file inside the <span class="special">2-html-css-code-empire</span> folder in your computer</li>
+                    <li>Add <code class="code"># The Code Empire HTML & CSS Tutorial</code> to the new <span class="special">README.md</span> file</li>
+                    <li> Follow the same steps given in this slide and then upload the file to Github</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>HELP</h3>
+                <p>If you are facing any problems with these Git and Github tutorial please as them on<a href="https://gitter.im/The-Code-Empire-Help/BASICS-environment-setup">The Code Empire Gitter Basics Help.</a>                    Ask your queries there. </p>
+            </section>
+
+            <section>
+                <h3>Finished Git and Github!</h3>
+                <p>Now we will see how to create a website using HTML & CSS.</p>
+                <p>That is all for today. Let's start Day 3 and make our first Website.
+                </p>
+                <p>Click <a href="">HERE</a> for our next lesson</p>
+                <p>Click <a href="">HERE</a> for our the course map</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            dependencies: [{
+                    src: 'js/markdown/marked.js'
+                },
+                {
+                    src: 'js/markdown/markdown.js'
+                },
+                {
+                    src: 'js/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'js/zoom.js',
+                    async: true
+                },
+                {
+                    src: 'js/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>
