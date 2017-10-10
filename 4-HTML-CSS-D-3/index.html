@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <title>Git and GitHub</title>
+    <title>HTML & CSS 1</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/sky.css">
@@ -25,8 +25,29 @@
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
     <style>
+        p {
+            font-size: 0.8em !important;
+        }
+
         h3 {
             color: #0078ad !important;
+        }
+
+        .preview {
+            padding: 10px !important;
+            text-align: left !important;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .preview>* {
+            font-size: 0.6em !important;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white !important;
+        }
+
+        .preview>h1 {
+            text-transform: none;
+            font-size: 1.2em !important;
         }
 
         .special {
@@ -67,8 +88,9 @@
                     <h3>USING HTML and CSS to Create Websites</h3>
                     <p style="font-size:0.8em;">In Day 3 of our course we shall be looking at how to start Creating Websites. Finally!!</p>
                     <p>
-                        Ever since the internet was on. HTML and CSS were first used to make websites and they have remained ever 
-                        since then. CSS came later on. But almost as old as HTML. Let's look at how we can make beautiful websites using HTML and CSS.
+                        Ever since the internet was on. HTML and CSS were first used to make websites and they have remained ever since then. CSS
+                        came later on. But almost as old as HTML. Let's look at how we can make beautiful websites using
+                        HTML and CSS.
                     </p>
                 </section>
             </section>
@@ -76,7 +98,7 @@
             <section>
                 <h3>HELP</h3>
                 <p>For any kind of Help regarding <span class="special">HTML & CSS</span> Lesson don't hesitate to ask them
-                    on <a href="https://gitter.im/The-Code-Empire-Help/HTML-CSS">The Code Empire Gitter HTML and CSS Help.</a> 
+                    on <a href="https://gitter.im/The-Code-Empire-Help/HTML-CSS">The Code Empire Gitter HTML and CSS Help.</a>
                 </p>
                 <p>You will have to join the Room as a new member</p>
             </section>
@@ -85,287 +107,1084 @@
             <section>
                 <section>
                     <h3>Last Exercise</h3>
-                    <p>In the last exercise we had to create new Folder and  Github repository named <span class="special">2-html-css-tutorial</span>.
+                    <p>In the last exercise we had to create new Folder and Github repository named <span class="special">2-html-css-tutorial</span>.
                     </p>
-                    <p>We shall be working from inside that directory/repository</p>
+                    <p>We shall be working from inside that directory/repository. To start open up that folder in VS Code (Right-click
+                        and <span class="special">Open Code Here</span>)</p>
+                    <small><a class="fragment navigate-down">Go down for more </a></small>
                 </section>
                 <section>
-                    <h4>Opening the Command Line</h4>
-                    <p>To open the command within any folder, just right click anywhere inside a folder and then select:</p>
-                    <ul>
-                        <li><span class="special">Cmder here</span> if you are on Windows</li>
-                        <li><span class="special">Open in terminal</span> if you are on MAC/Linux</li>
-                    </ul>
-                    <small class="navigate-down special" href="#/1">Click here to for futher lessons</small>
+                    <h3>Make two folders</h3>
+                    <p>On the right pane of VS Code. Right-Click and then make two folders: <span class="special">Tutorials</span>                        and <span class="special">Components</span></p>
+                    <img src="images/1.jpg" alt=""><br>
+                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
                 </section>
-                <section>
-                    <h4>Folder Commands in Terminal/Command Line</h4>
-                    <p>Let's make a folder for all our files we will create in Command Line:</p>
-                    <p class="fragment">Open Command Line using the instructions above and then type <code class="hljs" style="word-wrap: break-word;">mkdir the-code-empire</code>                        and press ENTER.</p>
-                    <p class="fragment">Congratulations! You just created a new folder named <span class="special">code-empire</span> using
-                        <code class="hljs">mkdir</code> command.</p>
-
-                    <small class="fragment navigate-down special" href="#/1">Click here to for futher lessons</small>
-                </section>
-                <section>
-                    <h4>Navigating inside a folder.</h4>
-                    <p>As a programmer, we don't name our files and folder with spaces. This is very convenient</p>
-                    <p class="fragment">Keeping the command line open, now type <code class="hljs" style="word-wrap: break-word;">cd the-code-empire</code>                        and hit ENTER</p>
-                    <p class="fragment">That's it we navigated into the folder in command line. <code class="code">cd</code> is for navigating
-                        between folders.</p>
-                    <p class="fragment">We can go back one folder up using: <code class="hljs" style="word-wrap: break-word;">cd ..</code></p>
-                </section>
-
             </section>
 
             <!-- Slide -->
 
             <section>
                 <section>
-                    <h3>Git Introduction</h3>
-                    <img src="images/git.png" width="10%" alt="Chrome Icon" style="border-style:none;" />
-                    <p>Git is a super weapon to carry around for developers. It manages your coding projects and files and help
-                        them to be connected to the GitHub/BitBucket etc. It is a version control system. Helps you configure
-                        the version of your project.
+                    <h3>What is HTML & CSS?</h3>
+                    <p>We have already heard of writing Markdown code. Markdown is also kind of a coding markup language to
+                        write text formats. But Markdown does not create web pages. The web pages you generally see is written
+                        in HTML, CSS and JavaScript.
                     </p>
-                    <small>Click <span class="navigate-down special" href="#/1">here</span> to see what is a version.</small>
+                    <p class="fragment">
+                        HTML is also a markup language that is used to write website basic skeleton. Anything that you see when opening a website
+                        has a HTML basic skeleton.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down for more</a></small>
                 </section>
                 <section>
-                    <h4>What is a version?</h4>
-                    <p>A version is the number/character given to a particular project/software/hardware which tells us how
-                        many times the creator have updated it.
+                    <p>CSS is a language that is used to make the dull looking HTML page stylish with colors, font and layout.
                     </p>
-                    <p class="fragment">With every update on a software/hardware comes new features. Every update increases the version no. of
-                        a project .</p>
-                    <p class="fragment">Git helps us in controlling changes and versions of our projects</p>
+                    <p class="fragment">We will talk about JavaScript in later lessons. It is used to make websites more interactive. Now its
+                        much more than that.
+                    </p>
+
                 </section>
             </section>
 
 
             <section>
                 <section>
-                    <h3>Git Tutorial - 1</h3>
+                    <h3>Let's make our first website</h3>
                     <p>
-                        Let’s Start using Git and make our first repository in Github
+                        In the <span class="special">tutorials</span> folder add a new file named <code>html-basics-1.html</code>                        and add the following code:
                     </p>
-                    <ol>
-                        <li>Open the <code class="special">the-code-empire</code> folder. Try it with command line.</li>
-                        <li>Now once inside the folder in command line type: <code class="hljs" style="word-wrap: break-word;">mkdir 1-git-turial</code></li>
-                        <li>Hit Enter and then type again:<code class="hljs" style="word-wrap: break-word;">cd 1-git-tutorial</code></li>
-                    </ol>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;HTML Basics 1&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;This is the first tutorial for learning how to make Websites!&lt;/h1&gt;
+    &lt;/body&gt;                         
+&lt;/html&gt;
+                    </code></pre>
+                    <p>Save the File and minimize Visual Studio Code.</p>
                     <small><a class="navigate-down special" href="#/1">Go down for further instructions:</a> </small>
                 </section>
                 <section>
-                    <p>4. Next type <code class="code">git init</code></p>
-                    <small>This will make the folder compatible to be used with Git. Make this a habit.</small>
-                    <br>
-                    <p>There you go. A new Git repository is created.</p>
-                    <p>In Github and Git every project is called as <span class="special">repository</span>.</p>
-                    <p><span class="special">1-git-tutorial</span> is our first repository/project</p>
+                    <p>Now double click the new <span class="special">html-basics-1.html</span> file to open it in the browser.
+                        What do you see?</p>
+                    <img src="images/2.jpg" alt="">
+                    <p style="font-size:0.7em;">There you go. Your first website! Its boring I know. Wait for sometime.</p>
                 </section>
             </section>
-
 
             <section>
                 <section>
-                    <h3>Git Tutorial 2</h3>
+                    <h3>So, how did all of this work?</h3>
                     <p>
-                        Let us start with Documentation using a special writing format named <span class="special">Markdown</span>
+                        Let's see how the internet browser actually take all the code we wrote in the VS Code and then process it to display that.
                     </p>
-                    <p class="fragment">
-                        Every project we make needs a description. A description about what the project is about, how to use it and how to install
-                        the project. This description is called <span class="special">documentation</span>
-                    </p>
-                    <small class="fragment">Go <a class="navigate-down special" href="#/1">down</a> to see how to write a Markdown file and document
-                         our <span class="special">1-git-tutorial</span> repository.</small>
+                    <small><a class="fragment navigate-down">Go down for more</a></small>
                 </section>
                 <section>
-                    <h4>Writing a new Markdown File:</h4>
-                    <p>Let's write a new <span class="special">markdown</span> file and <span class="special">document</span>                        our <span class="special">1-git-tutorial</span> project</p>
-                    <p>Most of the documentation is written in a file named <span class="special">README.md</span> which is
-                        then kept at the root of the repository/project. This <span class="special">README.md</span> is used
-                        to know about the project. So write it nicely!</p>
-                    <a class="fragment navigate-down">Go down to the next slide</a>
-                </section>
-                <section>
-                    <h4>Writing Markdown</h4>
-                    <p>1. Inside the folder in the window, right click anywhere and then click on <span class="special">Open with Code</span>.
-                        This will open the repository in Visual Studio Code.</p>
-                    <p>2. Then right click on the <span class="special">Explorer</span> Pane of VS Codea and click <span class="special">New File</span></p>
-                    <img src="images/vscode.png" alt="VSCode">
-                </section>
-                <section>
-                    <p>3. Rename the file as <span class="special">README.md</span>. <code>.md</code> basically represents a markdown file.</p>
-                    <p>4. The File will spring on the Right Side. Simply write the following on the Right Pane:</p>
-                    <code class="code"># The Code Empire Git Tutorial</code>
-                    <p>5. Press <span class="special">Cntrl + S</span> to save your file.</p>
-                    <p>6. To preview how it looks like simply press. <code class="code">Ctrl + K</code>. Release the <span class="special">Ctrl</span></p>                       key and press <code>V</code>.</p>
-                    <small><a class="fragment navigate-down">Go down to see the final Preview </a></small>
-                </section>
-                <section>
-                    <img src="images/vscode2.png" alt="VSCode 2">
-                    <p>On the right is a screen with the letters <span class="special">The Code Empire Git Tutorial</span> written in large format. </p>
-                </section>
-                <section>
-                    <p>When we wrote <code class="code"># The Code Empire Git Tutorial</code> it basically converted
-                    all the contents after <code class="code">#</code> to a large size</p>
-                    <p>Similarly adding <code class="code">##</code> or <code class="code">###</code> will change it to 
-                    further smaller size.</p>
-                    <p>Try it out!</p>
-                    <p> Let's add some more text to the documentation.</p>
-                </section>
-                <section>
-                    <p>Add the following to the README.md file on the right window.</p>
-                    <code class="hljs" style="word-wrap: break-word; text-align:left;">
-                        # The Code Empire Git Tutorial <br>
-                        ## Writing a documentation with Markdown<br>
-                        I did the following in this tutorial:<br>
-                        1. Making a markdown.<br>
-                        2. Uploading this repo on Github.<br>
-                    </code>
-                    <p>And then save the file with <span class="special">Ctrl + S</span></p>
-                    <p>The file is ready to be uploaded to Github now. Let's do it!</p>
-                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+                    <h4>Code To Display Process:</h4>
+                    <ol>
+                        <li><span class="special">Step 1:</span>You write some code in a file ending with <code>.html</code>                            file extension*.
+                        </li>
+                        <li><span class="special"> Step 2:</span> When you open that <code>.html</code> file using a web browser,
+                            the web browser processes the HTML code you wrote earlier in VS Code.</li>
+                        <li><span class="special">Step 3:</span>Then it displays it to a readable format to browser screen</li>
+                    </ol>
                 </section>
             </section>
 
+            <section>
+                <section>
+                    <h3>Destructuring the HTML Code:</h3>
+                    <p>Let us destructure the HTML code we wrote in VS Code:</p>
+                    <code>&lt;!DOCTYPE html&gt;</code>
+                    <p>The first line of our code : It says that we are writing an HTML document. It has to be written on top
+                        of our HTML file so as to signal the browser that it is dealing with a html document.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down for more </a></small>
+
+                </section>
+                <section>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;html&gt;
+    &sbsp;…..contents in between                    
+&lt;/html&gt;
+                        </code></pre>
+                    <p>Almost every html tag has a closing and an end tag. Anything that is written with angular Brackets “
+                        <>” is a tag. Any Code we write in futuremust be inside the html tags <span class="special">&lt;html&gt;&lt;/html&gt;</span>
+                    </p>
+                    <p class="fragment">The <span class="special">&lt;html&gt;</span> tag is the outermost tag</p>
+                </section>
+                <section>
+                    <h3>Tags</h3>
+                    <p>HTML is written with many tags. Tags are written as angular brackets. <span class="special"> “<>”</span>
+                    </p>
+                    <p class="fragment">Here the html tags has a start and closing tag. A start tag has just the name of the tag written inside
+                        angular brackets. (<code class="code"> &lt;html&gt;,  &lt;head&gt;, &lt;body&gt; </code>)</p>
+                    <p class="fragment">An end tag has the same name written but with a “/” before the tag name. It denotes the end of that tag.
+                        (
+                        <code class="code"> &lt;/html&gt;,  &lt;/head&gt;, &lt;/body&gt; </code>)</p>
+                    <small><a class="fragment navigate-down">Go down for more</a></small>
+                </section>
+            </section>
             <!-- 7z installation -->
             <section>
+
                 <section>
-                    <h3>Creating a Github Repository</h3>
-                    <p>Let's Create a new Github Repository.</p>
-                    <ol>
-                        <li>Open <a href="www.github.com">Github.com</a> and click on <button style="background:green;color:white;font-size:0.6em;border:none;padding:0.5em;border-radius:5px;">New repository</button>
-                        on the Right of your screen.</li>
-                        <li>In the next scren, give the repository name as <span class="special">1-git-tutorial</span></li>
-                        <li>Add a description if you would like to</li>
-                        <li>Click on <button style="background:green;color:white;font-size:0.6em;padding:0.5em;border-radius:5px;border:none;">Create repository</button> at the end of the screen</li>
-                    </ol>
-                    <p>Congratulations! You just created a new Github repository. Let's upload our files now.</p>
+                    <h3>Destructuring the HTML Code -2</h3>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;html&gt;
+    …..contents in between                    
+&lt;/html&gt;
+                    </code></pre>
+                    <p class="fragment" style="font-size:0.7em;">
+                        Anything written inside the &lt;head&gt;&lt;/head&gt; tags is not displayed by the browser.
+                    </p>
+                    <p class="fragment" style="font-size:0.7em;">
+                        But, but, but that doesn’t mean the browser ignores any code written inside it.
+                    </p>
+                    <p class="fragment" style="font-size:0.7em;">
+                        It is processed first and the tags that are written inside the
+
+                        <head></head> is of importance.
+                    </p>
+                    <p class="fragment" style="font-size:0.7em;">
+                        We cannot write just about any tag inside the
+
+                        <head></head> tag. We will see what they are
+                    </p>
                 </section>
                 <section>
-                    <h3>Uploading files to Github</h3>
-                    <ol style="font-size:0.8em;">
-                        <li>Now simply copy the URL of your from the top of your screen ( Url bar ). Something like <span class="special">https://github.com/__your_name__/1-git-tutorial</span></li>
-                        <li class="fragment">Open your <span class="special">1-git-tutorial</span> folder in command line.
-                            <small >From now if I say open a folder in command Line. Simply right click anywhere in the folder and click on <span class="special">Open in Cmder</span> or <span class="special">Open in terminal</span></small></li>
-                        <li class="fragment">Run the following commands one by one in Command Line:</li>
-                        <code class="code fragment" style="text-align:left;">
-                            git add .<br>
-                            git commit -m "Your message for this upload ( Give anything here ) "<br>
-                            git remote add origin (Paste_your_url_here )<br>
-                            git push origin master
-                        </code>
-                        <li class="fragment">That's it. You just uploaded your files to Github. Now refresh the page in your browser to see the changes.</li>
-                    </ol>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;html&gt;
+    …..contents in between                    
+&lt;/html&gt;
+                        </code></pre>
+                    <p class="fragment" style="font-size:0.7em;">
+                        The <span class="special">body</span> tag is the one that the browser finally processes or lets say
+                        a better term ‘renders’ and displays it to you.
+                    </p>
+                    <p class="fragment" style="font-size:0.7em;">
+                        Anything you want to display to the browser screen is written inside the
+                        <span class="special">&lt;body&gt;&lt;/body&gt;</span> tag.
+                    </p>
+                    <p class="fragment" style="font-size:0.7em;">
+                        It is processed first and the tags that are written inside the
+
+                        <head></head> is of importance.
+                    </p>
+                    <p class="fragment" style="font-size:0.7em;">
+                        We cannot write just about any tag inside the
+
+                        <head></head> tag. We will see what they are
+                    </p>
+                </section>
+
+                <section>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;title&gt;HTML Basics 1&lt;/title&gt;
+                        </code></pre>
+                    <p>The <code class="code">title</code> tag is written only inside the head tag.</p>
+                    <p>All they do is to give a nice title to the webpage. See the picture below:</p>
+                    <img src="images/3.jpg" alt="">
                 </section>
                 <section>
-                    <h3>Explanation of the git commands:</h3>
-                    <ol>
-                        <li><code class="code">git add .</code>: This basically reviews all the files that are to updated.</li>
-                        <li><code class="code">git commit -m ""</code>: This says I have made the files and nowI am ready to upload</li>
-                        <li><code class="code">git remote add origin ...</code>: This connects your local repo to your github repo. Just connects not upload.</li>
-                        <li><code class="code">git push origin master</code>: This uploads your files to Github. </li>
-                    </ol>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;h1&gt;This is the first tutorial for learning how to make Websites!&lt;/h1&gt;
+                        </code></pre>
+                    <p>The <code class="code">h1</code> inside the <span class="special">body</span> tag is used to display
+                        large texts. It is similar to the <code class="code"># heading</code>we wrote in Markdown.</p>
+                    <p>Now below the <span class="special">&lt;h1&gt;</span> tag, add the following code, save it and refresh
+                        the page (F5) in browser.</p>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;h1&gt;Heading 1!&lt;/h1&gt;
+&lt;h2&gt;Heading 2!&lt;/h2&gt;
+&lt;h3&gt;Heading 3!&lt;/h3&gt;
+&lt;h4&gt;Heading 4!&lt;/h4&gt;
+&lt;h5&gt;Heading 5!&lt;/h5&gt;
+&lt;h6&gt;Heading 6!&lt;/h6&gt;
+                        </code></pre>
                 </section>
+                <section>
+                    <h3>Final Full Code:</h3>
+                    <p>Now below the <span class="special">&lt;h1&gt;</span> tag, add the following code, save it and refresh
+                        the page (F5) in browser.</p>
+                    <pre><code class="hljs" style="word-wrap: break-word;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+     &lt;title&gt;HTML Basics 1&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+     &lt;h1&gt;Heading 1!&lt;/h1&gt;
+     &lt;h2&gt;Heading 2!&lt;/h2&gt;
+     &lt;h3&gt;Heading 3!&lt;/h3&gt;
+     &lt;h4&gt;Heading 4!&lt;/h4&gt;
+     &lt;h5&gt;Heading 5!&lt;/h5&gt;
+     &lt;h6&gt;Heading 6!&lt;/h6&gt;
+ &lt;/body&gt;                         
+&lt;/html&gt;
+                     </code></pre>
+                    <small><a class="fragment navigate-down">Go down for final preview</a></small>
+                </section>
+                <section>
+                    <h3>This is what we will see in the browser</h3>
+                    <div style="background:white;font-size:0.8em;color:black;">
+                        <h1 style="font-family:sans-serif;font-size:3em;">Heading 1!</h1>
+                        <h2 style="font-family:sans-serif;font-size:2.5em;">Heading 2!</h2>
+                        <h3 style="font-family:sans-serif;font-size:2em;color:black !important;">Heading 3!</h3>
+                        <h4 style="font-family:sans-serif;font-size:1.5em;">Heading 4!</h4>
+                        <h5 style="font-family:sans-serif;font-size:1em;">Heading 5!</h5>
+                        <h6 style="font-family:sans-serif;font-size:0.8em;">Heading 6!</h6>
+                    </div>
+                </section>
+
             </section>
 
             <!-- CMDER Installation -->
             <section>
                 <section>
-                    <h3>Using the Git GUI</h3>
-                    <p  style="font-size:0.6em;">
-                        Remembering all those command line commands is a pain. Let's use the Git GUI software for uploading to Github.
+                    <h3>Tag meanings.</h3>
+                    <p>All these are heading tags you wrote and they start with <span class="special">(h1,h2,h3,h4,h5,h6)</span>.</p>
+                    <p>Let's see what are the otherr different types we can display text in HTML. Write the following code and
+                        display in your browser:</p>
+                    <pre><code class="hljs">
+&lt;p&gt;This is used to write a paragraph and has normal font size&lt;/p&gt;
+&lt;div&gt;This is used to write a division of a html code and has normal font size&lt;/div&gt;
+&lt;span&gt;Normal text. To be explained later.&lt;/span&gt;&lt;br/&gt;
+&lt;button&gt;This creates a button&lt;/button&gt;&lt;br/&gt;
+&lt;a href="#"&gt;This creates a new link. This is used to go to other sites.&lt;/a&gt;&lt;br/&gt;
+&lt;b&gt;This is a bold text of normal size&lt;/b&gt;&lt;br/&gt;
+&lt;i&gt;This is a italic font&lt;/i&gt;&lt;br/&gt;
+                    </code></pre>
+                    <small><a class="fragment navigate-down">Go down for preview</a></small>
+                </section>
+                <section>
+                    <div style="background:white;color:black;">
+                        <p>This is used to write a paragraph and has normal font size</p>
+                        <div>This is used to write a division of a html code and has normal font size</div>
+                        <span>Normal text. To be explained later.</span><br>
+                        <button style="font-size:1em;">This creates a button</button><br>
+                        <a href="#">This creates a new link. This is used to go to other sites.</a><br>
+                        <b>This is a bold text of normal size</b><br>
+                        <i>This is a italic font</i><br>
+                </section>
+                <section>
+                    <h4>Summary</h4>
+                    Except a few tags you must have got what all of them do. <br>
+                    <h5 class="fragment">The &lt;br/&gt; tag</h5>
+                    <p class="fragment">There is one strange tag/element that does not have a closing tag and the opening tag is weird looking.
+                        The &lt;br/&gt; elements. These are empty elements.</p>
+                    <p class="fragment">
+                        This one tells the browser to leave a space of one line. (break line). These empty elements do not require an extra closing
+                        tag but need a “/” at the end of the tag name instead of start.
                     </p>
-                    <ol style="font-size:0.7em;">
-                        <li class="fragment">First make a small change in the README.md file. Any change you wish.</li>
-                        <li class="fragment">Then in the folder <code class="code">1-git-tutorial</code> simply right click and select <span class="special">Git GUI here</span></li>
-                        <li class="fragment">A new window opens up. Press the <button style="font-size:0.6em;">Stage Changed</button> button. This will simply see what are the new files you added</li>
-                        <li class="fragment">Then press <button style="font-size:0.6em;">Commit</button> button. </li>
-                        <li class="fragment">Then from top of that window, select <span class="special">Remote</span> and then <span class="special">Add..</span> </li>
-                        <li class="fragment">Paste the URL you copied in the Location space. Add any name and press <span class="special">Add</span></li>
-                        <li class="fragment">That's it. Now click on <button style="font-size:0.6em;">Push</button> below the <button style="font-size:0.6em;">Commit</button> button.</li>
+                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <p>So, we looked into two types of elements. <br>
+                        <small>(Yes, we will be calling these conbination as elements from now)</small>
+                    </p>
+                    <p>First are the ones that have a closing tags. <code class="code">(&lt;head&gt;&lt;/head&gt;, &lt;p&gt;&lt;/p&gt;)</code></p>
+                    <p>And the other are the ones that don't have one and are single. <code class="code">(&lt;br/&gt;, &lt;img/&gt;, &lt;hr&gt;)</code></p>
+                    <p>So, let's look at another different type in which we can categorize elements.</p>
+                    <small><a class="fragment navigate-down">Go down to know more</a></small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>Inline & Block Elements</h4>
+                    <p>So, all the elements can be categorized into two more categories based on the width they take up.</p>
+                    <div class="fragment">
+                        <h4>Inline</h4>
+                        <p>They take up as much space as the elements/text/image/etc.. inside them</p>
+                    </div>
+                    <div class="fragment">
+                        <h4>Block</h4>
+                        <p>They take up the whole 100% width of the parent elements irrespective of the amount of contents inside
+                            them.
+                        </p>
+                    </div>
+                    <small><a class="fragment navigate-down">Go down to know more details</a></small>
+                </section>
+                <section>
+                    <h4>INLINE ELEMENTS</h4>
+                    <p>Let's take a look at what <span class="special">Inline Elements</span> are through a small exercise.</p>
+                    <p>First open up the <span class="special">1-html-basics.html</span> file in VS Code and delete everything
+                        inside the body element</p>
+                    <pre><code>&lt;body&gt;  &lt;/body&gt;</code></pre>
+                    <small><a class="fragment navigate-down">Go down </a></small>
+                </section>
+                <section>
+                    <p>Then type inside the <span class="special">body</span> element the following code:</p>
+                    <pre><code>
+&lt;body&gt;  
+    &lt;h1&gt;This is block (Heading)&lt;/h1&gt;
+    &lt;p&gt;This is block (Paragraph)&lt;/p&gt;
+    &lt;a&gt;This is inline (Link)&lt;/a&gt; &lt;br/&gt;
+    &lt;span&gt;This is inline (Span)&lt;/span&gt; &lt;br/&gt;
+    &lt;div&gt;This is block (Division). This is the most commonly used element.&lt;/div&gt;
+    &lt;code&gt;This is inline (Code)&lt;/code&gt; &lt;br/&gt;
+    &lt;button&gt;This is inline (Button) &lt;/button&gt; &lt;br/&gt;
+    &lt;code&gt;This is inline (Code)&lt;/code&gt; &lt;br/&gt;
+    &lt;b&gt;This is inline (Bold)&lt;/b&gt; &lt;br/&gt;
+    &lt;i&gt;This is inline (Italics)&lt;/i&gt;
+&lt;/body&gt;
+                        </code></pre>
+                    <small><a class="fragment navigate-down">Go down for more</a></small>
+                </section>
+                <section>
+                    <p>Now add another element <span class="special">style</span> inside the <span class="special">head</span>                        element:</p>
+                    <pre><code>
+&lt;head&gt;  
+    &lt;title&gt;HTML Basics 1&lt;/title&gt;
+    &lt;style&gt;
+        *{
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+                        </code></pre>
+                    <p>Don't worry about what this <span class="special">style</span> does. We will deal with that later.</p>
+                    <small><a class="fragment navigate-down">Go down to see the final preview</a></small>
+                </section>
+                <section>
+                    <h4>Final Preview</h4>
+                    <div style="font-size:0.8em;">
+                        You will see something like this in your browser.
+                    </div>
+                    <div class="preview">
+                        <h1>This is block (Heading)</h1>
+                        <p>This is block (Paragraph)</p>
+                        <a>This is inline (Link)</a> <br/>
+                        <span>This is inline (Span)</span> <br/>
+                        <div>This is block (Division). This is the most commonly used element.</div>
+                        <code>This is inline (Code)</code> <br/>
+                        <button>This is inline (Button) </button> <br/>
+                        <code>This is inline (Code)</code> <br/>
+                        <b>This is inline (Bold)</b> <br/>
+                        <i>This is inline (Italics)</i>
+                    </div>
+                    <small><a class="fragment navigate-down">Go down to understand this.</a></small>
+                </section>
+                <section>
+                    <p>
+                        So, in the browser whichever element has the dark black background extend to the full width is a
+                        <span class="special"> block </span>element and whichever element has background only limited to
+                        the text is an <span class="special"> inline</span> element.
+                    </p>
+                    <p class="fragment">
+                        So, therefore <code class="code">
+                            &lt;h1&gt;&lt;/h1&gt;</code> (& all the other headings (h2,h3..h6))<code class="code">&lt;p&gt;&lt;/p&gt;
+                        </code> & <code class="code">&lt;div&gt;&lt;/div&gt;</code> are all block elements.
+                    </p>
+                    <p class="fragment">
+                        And all the other <code class="code">&lt;a&gt;&lt;/a&gt;</code>,
+                        <code class="code">&lt;span&gt;&lt;/span&gt;</code>,
+                        <code class="code">&lt;code&gt;&lt;/code&gt;</code>,
+                        <code class="code">&lt;button&gt;&lt;/button&gt;</code>,
+                        <code class="code">&lt;i&gt;&lt;/i&gt;</code>
+                        <code class="code">&lt;b&gt;&lt;/b&gt;</code> elements are inline elements.
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>List of the most commonly used HTML elements and little bit of description:</h4>
+                    <table style="font-size:0.6em;">
+                        <thead>
+                            <th>Element Name</th>
+                            <th>Inline/Block</th>
+                            <th>Description</th>
+                            <th>Closing Tag</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>div</td>
+                                <td>Block</td>
+                                <td>Describes a division/section. Most used</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>span</td>
+                                <td>Inline</td>
+                                <td>Most basic inline element without any special characteristic</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                                <td>Block</td>
+                                <td>Used for writing Paragraphs</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>h1,h2..h6</td>
+                                <td>Block</td>
+                                <td>Used for writing Headings</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>a</td>
+                                <td>Inline</td>
+                                <td>Used for writing Hyperlinks (Links to other webpages)</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>button</td>
+                                <td>Inline</td>
+                                <td>Used for creating clickable buttons in webpages</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small><a class="fragment navigate-down">Go down to see more list of elements</a></small>
+                </section>
+                <section>
+                    <table style="font-size:0.6em;">
+                        <thead>
+                            <th>Element Name</th>
+                            <th>Inline/Block</th>
+                            <th>Description</th>
+                            <th>Closing Tag</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ul</td>
+                                <td>Block</td>
+                                <td>Create a un-numbered list</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>ol</td>
+                                <td>Block</td>
+                                <td>Create a numbered list</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>li</td>
+                                <td>Block</td>
+                                <td>Create a list item</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>table</td>
+                                <td>Block</td>
+                                <td>Used for making tables</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>thead</td>
+                                <td>Block</td>
+                                <td>Creating Table Headers</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>tbody</td>
+                                <td>Block</td>
+                                <td>Create a table body</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <p>Don't worry if you cannot remember all of these names or know what they are used for. We will discuss
+                        them later and use them a lot so that it sticks to the memory.
+                    </p>
+                    <table style="font-size:0.6em;">
+                        <thead>
+                            <th>Element Name</th>
+                            <th>Inline/Block</th>
+                            <th>Description</th>
+                            <th>Closing Tag</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>input</td>
+                                <td>Inline</td>
+                                <td>Create an input (form inputs)</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>hr</td>
+                                <td>Block</td>
+                                <td>Create a straight line for separating sections.</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>br</td>
+                                <td>Block</td>
+                                <td>Create a new break line</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>b</td>
+                                <td>Inline</td>
+                                <td>Used for creating bold texts</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>i</td>
+                                <td>Inline</td>
+                                <td>Used for creating italic texts</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>code</td>
+                                <td>Inline</td>
+                                <td>Used to highlight code snippets</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>form</td>
+                                <td>Block</td>
+                                <td>Used for creating Form Elements</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+
+
+            <section>
+
+                <section>
+                    <h3>HTML Reference</h3>
+                    <p>For any kind of Reference on any HTML Elements simply go to the link below:</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">
+                            <button style="font-size: 1em;">
+                                All HTML Elements References (Mozilla Docs)
+                            </button>
+                        </a>
+                    <p>Its advisable to save that webpage as a bookmark as you will regularly require it to refer for any kind
+                        of problem in HTML.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see how to bookmark a webpage.</a></small>
+                </section>
+                <section>
+                    <h3>How to bookmark a webpage in Google Chrome</h3>
+                    <small><a class="fragment navigate-down">Go down to see how to bookmark a webpage in Mozilla Firefox.</a></small>
+                </section>
+                <section>
+                    <h3>How to bookmark a webpage in Mozilla Firefox</h3>
+                </section>
+            </section>
+
+            <section>
+                <h3>CSS intro:</h3>
+                <p>
+                    We just learnt how to use basic HTML in a web page. Let's see how to style those boring HTML elements to make them look wonderful
+                    using <span class="special">CSS (Cascading Style Sheet)</span>.
+                </p>
+                <p class="fragment">
+                    CSS is <span class="special">"only"</span> used for styling HTML components and thus very easy to learn
+                    and use.
+                </p>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Using CSS with HTML</h3>
+                    <p>There are three ways to use CSS with HTML. Let's look at how to use CSS using the
+                        <span class="special">Internal Style Sheet</span> way.
+                    </p>
+                    <p class="fragment">First create a new file inside the <span class="special">tutorials</span> folder which is present in
+                        the <span class="special">2-html-css-code-empire</span> project repository named
+                        <span class="special">2-css-basics.html</span>. Try to do this using VS Code.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see the file structure in VS Code.</a></small>
+                </section>
+                <section>
+                    <p>
+                        Make sure the file structure of <span class="special">2-html-css-code-empire</span> repository is
+                        like the one below.
+                    </p>
+                    <img src="images/vscode3.png" alt="VS Code">
+                    <small><a class="fragment navigate-down">Go down to add basic CSS in <span class="special">2-css-basics.html</span>.</a></small>
+                </section>
+                <section>
+                    <p>Add the following code in <span class="special">2-css-basics.html</span></p>
+                    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS Basics&lt;/title&gt;
+        &lt;style&gt;
+
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;This HTML element is going to be styled now! Get ready&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                    <small><a class="fragment navigate-down">Go down to see a special VS Code Trick</a></small>
+                </section>
+                <section>
+                    <p>VS Code allows us to fasten our coding process using a special syntax completion feature called
+                        <span class="special">Emmets</span>
+                    </p>
+                    <p class="fragment">
+                        Basically, you can simply type a small word to and press the <span class="special">TAB</span> key
+                        to avoid writing long amount of code that you usually write before every file.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see how to use VS Code Emmet feature</a></small>
+                </section>
+                <section>
+                    <p>First delete everything you wrote inside <span class="special">2-css-basics.html</span> file.</p>
+                    <p class="fragment">Then write just <span class="special"> html:5</span> and hit the <span class="special">TAB</span> key.
+                    </p>
+                    <img class="fragment" src="images/vscode4.jpg" style="width:60%" /><img class="fragment" src="images/vscode5.jpg"
+                        style="width:60%" />
+                </section>
+                <section>
+                    <p>
+                        Simply change the <span class="special">title</span> element to <span class="special">CSS
+                         Basics</span>
+                    </p>
+                    <p>
+                        And also add a <code class="code">&lt;style&gt;&lt;/style&gt;</code> element in the <span class="special">head</span>                        element. Add a <code class="code">&lt;h1&gt;This is going to be styled&lt;/h1&gt;</code> inside the
+                        <span class="special">body</span> element.
+                    </p>
+                    <p class="fragment">
+                        Open the <span class="special">2-css-basics.html</span> file in a browser (Preferably Google Chrome).
+                    </p>
+                    <small class="fragment"><a href="navigate-right">Let's get started with CSS now.</a></small>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Getting started with CSS</h3>
+                    <p>
+                        We will write all our CSS Code inside the <code class="code">&lt;style&gt;&lt;/style&gt;</code> element
+                        we wrote inside the <span class="special">head</span> element.
+                    </p>
+                    <p class="fragment">
+                        Remember a fact that CSS only styles any element that is inside the <span class="special">body</span>                        element.
+                    </p>
+                    <small class="fragment"><a href="navigate-down">Go down</a></small>
+                </section>
+                <section>
+                    <p>Let's style the background of our website first. Add the following code inside the style element.</p>
+                    <pre><code>
+&lt;style&gt;
+    body{
+        background-color: lightgrey;
+    }
+&lt;/style&gt;
+                    </code></pre>
+                    <p>Save the file and refresh your browser page (F5) and see the changes.</p>
+                    <small class="fragment"><a href="navigate-down">Go down to see the preview</a></small>
+                </section>
+                <section>
+                    <h3>Preview</h3>
+                    <img src="images/csspreview.jpg">
+                    <p>
+                        Similarly you can add a background color to any element in HTML. Go on try adding a
+                        <span class="special">green</span> background-color to the div element.
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Understanding how CSS code works</h3>
+                    <pre><code>
+&lt;style&gt;
+    body{
+        background-color: lightgrey;
+    }
+&lt;/style&gt;
+                        </code></pre>
+                    <p class="fragment">The above code has three parts. Let's see what they are:</p>
+                    <small class="fragment"><a href="navigate-down">Go down</a></small>
+                </section>
+                <section>
+                    <ol style="font-size:0.8em;">
+                        <li>
+                            <b>Selector:</b> The <b>body</b> part is the selector. It selects which element we are going
+                            to style. Here we are styling <span class="special">body</span> element.
+                        </li>
+                        <li class="fragment">
+                            <b>Property:</b> The <b>background-color :</b> part is the <span class="special">property</span>.
+                            It actually mentions what we are going to style. Here we are styling the <span class="special">background-color</span>                            of the body element.
+                        </li>
+                        <li class="fragment">
+                            <b>Value:</b> The <b>lightgrey</b> part is the <span class="special">value</span> for the
+                            <i>Property </i> background-color. A small <span class="special">:</span> separates property
+                            from value. Here we are giving the background-color a <span class="special">value</span> of
+                            <span style="color:lightgrey;font-weight:bold;">green</span>.
+                        </li>
+                        <p class="fragment">
+                            See that small <span class="special">;</span> after lightgrey. That is what denotes the end of
+                            any CSS property-value pair.
+                        </p>
                     </ol>
                 </section>
+            </section>
+
+            <section>
                 <section>
-                    <p>Step 3, 4 & 5:</p>
-                        <img src="images/git 1.jpg" alt="">
-                   
+                    <h3>Add more CSS to style</h3>
+                    <pre><code>
+h1{
+    color: green;
+    font-style: italic;
+}
+                </code></pre>
+                    <p>Final Style:</p>
+                    <pre><code>
+&lt;style&gt;
+body{
+    background-color: lightgrey;
+}
+h1{
+    color: green;
+    font-style: italic;
+    font-family: sans-serif;
+}
+&lt;style&gt;
+                </code></pre>
+                    <small class="fragment"><a href="navigate-down">Go down</a></small>
                 </section>
                 <section>
-                        <p>Step 6 :</p>
-                        <img src="images/git 2.jpg" alt="">
+                    <h3>Preview</h3>
+                    <p>The following will be displayed in your browser</p>
+                    <div style="height:300px; background-color: lightgrey;">
+                        <h3 style="text-transform:none;text-align:left;font-style:italic;font-family: sans-serif;color:green !important;">
+                            This is going to be Styled.
+                        </h3>
+                    </div>
+                    <small class="fragment"><a href="navigate-down">Go down to see what the other styles means.</a></small>
                 </section>
                 <section>
-                        <h3>Video Tutorial on how to Publish files to Github.</h3>
+                    <h3>CSS properties:</h3>
+                    <p>
+                        There are many many CSS properties that we can use to style HTML elements. We mentioned only a few. Let's see what they mean
+                        and do:
+                    </p>
+                    <ol style="font-size:0.8em;">
+                        <li><b>color:</b> This gives the text color. (note: its not background-color)</li>
+                        <li>
+                            <b>font-style:</b> This has three values, <span style="font-style:italic !important;">italic</span>                            (makes the text italics), normal (the default value), <span style="font-style:oblique;">oblique</span>                            (somewhat less italics)
+                        </li>
+                        <li><b>font-family:</b> The type of font your text should be displayed with (Typography). We have defined
+                            sans-serif here. We will discuss Typography later.</li>
+                    </ol>
+                    <small class="fragment"><a href="navigate-down">Go down to see CSS Reference.</a></small>
+                </section>
+                <section>
+                    <h3>CSS Reference</h3>
+                    <p>For any kind of Reference on any CSS Properties and Values simply go to the link below:</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">
+                                <button style="font-size: 1em;">
+                                    All CSS References (Mozilla Docs)
+                                </button>
+                            </a>
+                    <p>Its advisable to save that webpage as a bookmark as you will regularly require it to refer for any kind
+                        of problem in CSS.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see how to bookmark a webpage in a bookmarks folder (Web Development).</a></small>
+                </section>
+                <section>
+                    <h3>How to bookmark a page in Google Chrome.</h3>
                 </section>
             </section>
 
             <section>
-                <h3>Exercise</h3>
-                <p style="font-size:0.6em;">If you have done the previous task then do this exercise:</p>
-                <ol style="font-size:0.7em;">
-                    <li> Create a new repository named “2-html-css-code-empire” in Github and a new folder named 
-                        <span class="special">2-html-css-code-empire</span> inside <span class="special">the-code-empire</span></li>
-                    <li>Create a blank README.md file inside the <span class="special">2-html-css-code-empire</span> folder in your computer</li>
-                    <li>Add <code class="code"># The Code Empire HTML & CSS Tutorial</code> to the new <span class="special">README.md</span> file</li>
-                    <li> Follow the same steps given in this slide and then upload the file to Github</li>
-                </ol>
+                <section>
+                    <h3>The Space and Orientation of Code:</h3>
+                    <p>All spaces in your code are counted as just one space in a <span class="special">html</span> file no
+                        matter how many you give or change the line. The browser ignores more than one space between any
+                        code.
+                    </p>
+
+                    <pre><code>
+                &lt;div&gt;
+                    &lt;h1&gt;
+                        This is HTML!
+                    &lt;/h1&gt;
+                &lt;/div&gt;
+                </code></pre>
+                    <p>is equal to</p>
+                    <pre><code>&lt;div&gt;&lt;h1&gt;This is HTML!&lt;/h1&gt; &lt;/div&gt;</code></pre>
+                    <small><a class="fragment navigate-down">Go down for more space and orientation of Code</a></small>
+                </section>
+                <section>
+                    <h4>Always write Readable Code. </h4>
+                    <p>
+                        When you are writing code, always make it a habit to write code that is easily readable by anyone or you in future. Not that
+                        writing nice looking code makes your final website super cool.
+                    </p>
+                    <p class="fragment">
+                        But try to avoid being cursed by other programmers who are working with you. :).
+                    </p>
+                    <p class="fragment">Don't forget to put <span class="special">TAB</span> spaces whenever any element is inside another element.</p>
+                    <small><a class="fragment navigate-down">Go down for more space and orientation of Code</a></small>
+                </section>
+                <section>
+                    <pre><code>
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;h1&gt;
+            This is HTML!
+        &lt;/h1&gt;
+    &lt;/div&gt;  
+&lt;/body&gt;                     
+                    </code></pre>
+                    <p style="color:red;">^ Right way of Writing HTML.</p>
+                    <pre><code>
+&lt;body&gt;
+&lt;div&gt;
+&lt;h1&gt;
+This is HTML!
+&lt;/h1&gt;
+&lt;/div&gt;  
+&lt;/body&gt;                  
+                    </code></pre>
+                    <p style="color:green;">^Wrong Way of writing HTML.</p>
+                    <small><a class="fragment navigate-down">Go down for more Space and orientation of CSS</a></small>
+                </section>
+                <section>
+                    <h3>Writing Clean CSS Code</h3>
+                    <p>CSS Code inside the <span class="special">style</span> element has its own way of being written. Not
+                        that having spaces matter but it is a good practice and habit</p>
+                    <pre><code>
+body{
+    background-color: green;
+}                 
+                    </code></pre>
+                    <p style="color:green;">^ Best way of writing CSS.</p>
+                    <pre><code>
+body{ background-color: green;}               
+                    </code></pre>
+                    <p style="color:red;">^ Not so good way of writing CSS. </p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Attributes, Class & Id.</h3>
+                    <p>We will finish today's lesson with a tutorial on HTML attributes, class and id.</p>
+                    <h4 class="fragment">What are Attributes?</h4>
+                    <p class="fragment">Attributes are like properties of an HTML element like style, size or its identity. Attributes are written
+                        like the following inside the opening tag of an HTML element:</p>
+                    <pre class="fragment"><code>
+    &lt;html lang="en-US"&gt;...&lt;/html&gt;
+    &lt;p title="This paragraph"&gt;....&lt;/p&gt;
+    <a href="www.google.com">....</a>
+                    </code></pre>
+                    <p class="fragment">
+                        Here <span class="special">lang="en-US"</span>, <span class="special"> title="This paragraph"</span>                        &
+                        <span class="special">href="www.google.com"</span> are attributes.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down for more about attributes</a></small>
+                </section>
+                <section>
+                    <p>
+                        We will discuss about all the attributes in this course. Let's discuss about the two most used attributes,
+                        <span class="special">class</span> & <span class="special">id</span> which are appicable to all the
+                        HTML elements.
+                    </p>
+                    <ol style="font-size: 0.8em;" class="fragment">
+                        <li><b>class:</b> Class is used to group together a particular set of elements that you want to have
+                            the same CSS style or any events.</li>
+                        <li><b>id: </b> Id is used to denote a particular element only. </li>
+                    </ol>
+                    </pre>
+                    <p class="fragment">
+                        Explaining more clearly, in an office, comparing all employees, a particular department may be considered a class and an
+                        employee of that department may have an id, for example his/her name.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down for more about attributes</a></small>
+                </section>
+                <section>
+                    <p>Writing <span class="special">class</span> & <span class="special">id</span> attributes.</p>
+                    <pre><code>
+<p class="super-para">Part of super-para Class</p>
+<p class="super-para" id="para1">Part of super-para class & has id: para1 </p>
+<p id="para2">Not part of any class and has id: para2</p>
+                    </code></pre>
+                    <p class="fragment">
+                        Don’t use space anywhere while giving a name of id/class & don't start with a number:<br/>
+                        <span style="color:red">class="class 1" - This is wrong </span><br/>
+                        <span style="color:red">id="" - This is wrong</span><br/>
+                        <span style="color:green">class="class1" - This is correct</span><br/>
+                        <span style="color:green">class="class-1" - This is correct</span><br/>
+                    </p>
+                    <small><a class="fragment navigate-down">Go down for more about attributes</a></small>
+                </section>
+                <section>
+                    <h3>The Style Attribute</h3>
+                    <p>
+                        Another way of writing <span class="special">CSS</span> and a attribute in itself is the
+                        <span class="special">style</span> attribute. Let's see how CSS can be written in a different way
+                        with HTML:
+                    </p>
+                    <pre class="fragment"><code>
+<h1 style=" color:green; background-color:red; ">Stylish Header</h1>
+                    </code></pre>
+                    <p class="fragment">This gives the particular element (Here its h1) a background-color & a color.</p>
+                    <p class="fragment">This is called <span class="special">Inline-CSS</span> and is more important or has higher precedence
+                        than the style you declare inside <span class="special">style</span> tags.
+                    </p>
+                    <p class="fragment">Only declare CSS here if its very much important. Otherwise your code will look less pretty and more
+                        cluttered.
+                    </p>
+                </section>
             </section>
 
             <section>
-                <h3>HELP</h3>
-                <p>If you are facing any problems with these Git and Github tutorial please as them on<a href="https://gitter.im/The-Code-Empire-Help/BASICS-environment-setup">The Code Empire Gitter Basics Help.</a>                    Ask your queries there. </p>
+                <section>
+                    <h3>Styling elements using class/id</h3>
+                    <p>
+                        Now that you have learnt what are attributes and classes, let's see how we can use them to style our elements.
+                    </p>
+                    <p>
+                        It is not encourage to use CSS as an attribute. So, we will stick to the
+                        <span class="special">style</span> tag for now.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down for more class/id styling </a></small>
+                </section>
+                <section>
+                    <p>So, open up your <span class="special">css-basics-1.html</span> file in VS Code if not already open and
+                        change the following code below <span class="special">inside the body element</span>:
+                    </p>
+                    <pre><code>
+&lt;body&gt;
+    &lt;h1&gt;This is going to be styled&lt;/h1&gt;
+    &lt;h2 class="animal"&gt; This is Heading for the Animals &lt;/h2&gt;
+    <p class="animal "id="deer">This is the Deer</p>
+&lt;/body&gt;                    
+                    </code></pre>
+                    <p class="fragment">Now go to the <span class="special">style</span> element at the start of the document and change the
+                        code as in the slide <a class="navigation-down">below.</a></p>
+                    <small><a class="fragment navigate-down">Go down for more class/id styling </a></small>
+                </section>
+                <section>
+                    <pre><code>
+&lt;style&gt;
+    body {
+            background-color: lightgrey;
+            color: green;
+    }
+
+    h1 {
+            color: green;
+            font-style: italic;
+            font-family: sans-serif;
+    }
+
+    .animal{
+        background-color: yellow; 
+    }
+
+    #deer {
+        color: orange;
+    }
+
+&lt;/style&gt;                    
+                    </code></pre>
+                    <p>Save the file and refresh the page in the browser.</p>
+                    <p class="fragment">See, that the selectors, <span class="special">animal</span> &
+                        <span class="special">deer</span> have a <span class="special">dot(.)</span> & a
+                        <span class="special">hash(#)</span> respectively before them.<br/>
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see the Preview. </a></small>
+                </section>
+                <section>
+                    <h3>Preview</h3>
+                    <div style="background:grey; height:50vh;text-align:left;">
+                        <h3 style="text-transform:none;color:green !important;">This is going to be styled</h1>
+                            <h4 style="background-color: yellow;text-transform:none;"> This is Heading for the Animals </h2>
+                                <p style=" color: orange;background-color: yellow;">This is the Deer</p>
+                    </div>
+                    <p>The <span class="special">dot(.)</span> is for selecting the elements with a <span class="special">class</span><br>                        & the <span class="special"> hash(#)</span> is for selecting the elements with an <span class="special">id</span>.</p>
+                </section>
             </section>
 
             <section>
-                <h3>Finished Git and Github!</h3>
-                <p>Now we will see how to create a website using HTML & CSS.</p>
-                <p>That is all for today. Let's start Day 3 and make our first Website.
+                <section>
+                    <h3>Time to update the Git Repository.</h3>
+                    <p>Remember that you have uploaded this repository <span class="special">2-html-css-code-empire</span> to
+                        GitHub.</p>
+                    <p class="fragment">Now that you have created new files and written something on it, its time to update the Git repository.</p>
+                    <p class="fragment">For these instructions follow the slide below.</p>
+                    <small><a class="fragment navigate-down">Go down to git update</a></small>
+                </section>
+                <section>
+                    <p>Instructions for updating the new code to GitHub.</p>
+                    <ol style="font-size:0.8em;">
+                        <li class="fragment">Save all the files in the <span class="special">2-html-css-code-empire</span> using (Ctrl+S)</li>
+                        <li class="fragment">Then go inside the folder in File Explorer/ Windows Explorer and then <span class="special"> right click > Open Hyper here</span></li>                        
+                        <li class="fragment">Type <code class="code">git add .</code> and hit <span class="special">ENTER</span> key. This adds all the new changes in the repository to be processed for uploading.</li>
+                        <li class="fragment">Type <code class="code">git commit -m "I made new HTML Tutorial Files"</code> and hit ENTER. This actually finalizes the new changes to be processed.</li>
+                        <li class="fragment">Finally type <code class="code">git push origin master</code> and hit ENTER. This will update your GitHub repository according to the local repository.</li>
+                    </ol>
+                </section>
+            </section>
+            <section>
+                    <h3>HELP</h3>
+                    <p>If you are facing any problems with these HTML/CSS tutorials please ask them on<a href="https://gitter.im/The-Code-Empire-Help/HTML-CSS">The Code Empire Gitter HTML/CSS Help.</a>                    Ask your queries there. </p>
+            </section>
+            <section>
+                <h3>Finished HTML/CSS Part 1 (Day 3)!</h3>
+                <p>The next Tutorial will be awesome. We will actually make new things. You won't be bothered by many new terms
+                    too.
+                </p>
+                <p>That is all for today. Let's start Day 4 and continue with HTML/CSS.
                 </p>
                 <p>Click <a href="">HERE</a> for our next lesson</p>
                 <p>Click <a href="">HERE</a> for our the course map</p>
             </section>
 
+            </div>
         </div>
-    </div>
 
-    <script src="js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+        <script src="js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
 
-    <script>
-        // More info about config & dependencies:
-        // - https://github.com/hakimel/reveal.js#configuration
-        // - https://github.com/hakimel/reveal.js#dependencies
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            dependencies: [{
-                    src: 'js/markdown/marked.js'
-                },
-                {
-                    src: 'js/markdown/markdown.js'
-                },
-                {
-                    src: 'js/notes/notes.js',
-                    async: true
-                },
-                {
-                    src: 'js/zoom.js',
-                    async: true
-                },
-                {
-                    src: 'js/highlight.js',
-                    async: true,
-                    callback: function () {
-                        hljs.initHighlightingOnLoad();
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                dependencies: [{
+                        src: 'js/markdown/marked.js'
+                    },
+                    {
+                        src: 'js/markdown/markdown.js'
+                    },
+                    {
+                        src: 'js/notes/notes.js',
+                        async: true
+                    },
+                    {
+                        src: 'js/zoom.js',
+                        async: true
+                    },
+                    {
+                        src: 'js/highlight.js',
+                        async: true,
+                        callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }
                     }
-                }
-            ]
-        });
-    </script>
+                ]
+            });
+        </script>
 </body>
 
 </html>

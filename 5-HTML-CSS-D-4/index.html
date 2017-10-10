@@ -1,0 +1,794 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Introduction to Code Empire">
+    <meta name="author" content="Himujjal">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>HTML & CSS 2 (Day 4)</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/sky.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style>
+        p {
+            font-size: 0.8em !important;
+        }
+
+        h3 {
+            color: #0078ad !important;
+        }
+
+        .preview {
+            padding: 10px !important;
+            text-align: left !important;
+            background-color: rgb(0, 68, 100)
+        }
+
+        .preview>* {
+            font-size: 0.6em !important;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white !important;
+        }
+
+        .preview>h1 {
+            text-transform: none;
+            font-size: 1.2em !important;
+        }
+
+        .special {
+            color: #0078ad;
+            font-weight: bolder !important;
+        }
+
+        .code {
+            background: #3f3f3f;
+            color: white;
+        }
+
+        button.btn {
+            background-color: darkblue;
+            color: white;
+            padding: 0.5em;
+            font-size: 1em;
+            border-radius: 0.1em;
+            border: solid 0.1em black;
+        }
+
+        button.primary {
+            background-color: teal;
+        }
+
+        button.btn:hover {
+            background-color: blue;
+            box-shadow: 0.2em 0.2em 1em grey;
+        }
+
+        button.btn:active {
+            background-color: white;
+            color: darkblue;
+            box-shadow: 0.2em 0.2em 1em grey;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <div style="position:absolute;top:10px;left:10px;z-index:999;">
+        <a href="#">
+            <span>
+                    <img height="70px" width="auto" src="images/CE.jpg" alt="Logo"/>
+            </span>
+           
+        </a>
+    </div>
+
+    <!-- The Slides start here -->
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide -->
+            <section>
+                <h2>HTML & CSS Part 2<span class="special"> (DAY 4) </span></h2>
+            </section>
+
+            <section>
+                <section>
+                    <h3>USING HTML and CSS to Create Websites</h3>
+                    <p style="font-size:0.8em;">In Day 4 of our course we shall continue to work on our HTML/CSS Skills and learn a few more things needed
+                        to make websites.</p>
+                    <p>
+                        Let's now make Buttons, learn what is the CSS box model and explore more styles.
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <h3>HELP</h3>
+                <p>For any kind of Help regarding <span class="special">HTML & CSS</span> Lesson don't hesitate to ask them
+                    on <a href="https://gitter.im/The-Code-Empire-Help/HTML-CSS">The Code Empire Gitter HTML and CSS Help.</a>
+                </p>
+            </section>
+
+            <!-- Slide -->
+
+            <section>
+                <section>
+                    <h3>Let's make a cool Button</h3>
+                    <p>The <span class="special">button</span> an inline element and takes up only as much space as it requires.
+                        <br/>This time we will be making a new HTML file in the <span class="special">components</span> folder
+                        in the same repository as before <span class="special">2-html-css-code-empire</span> and name the
+                        file as <span class="special">button.html</span>
+                    </p>
+                    <p class="fragment">
+                        Now, since we are using VS Code, taking advantage of its <span class="special">Emmet</span> feature,
+                        simply type <code class="code">html:5</code> and press <span class="special">TAB</span> key.
+                    </p>
+                    <p class="fragment">
+                        Change the <code class="code">&lt;title&gt;</code> to <span class="special">Buttons</span>. We are
+                        ready to get started now.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see the new file preview.</a></small>
+                </section>
+                <section>
+                    <h3>PREVIEW</h3>
+                    <img src="images/vscode1.jpg" alt="">
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h3>Start with a Basic Button element</h3>
+                    <p>
+                        1. Add a simple <code class="code">&lt;button&gt; Button &lt;button&gt;</code> element to the
+                        <span class="special">body</span>.
+                    </p>
+                    <p class="fragment">
+                        2. Add a <span class="special">class="btn"</span> to the button.
+                    </p>
+                    <p class="fragment">
+                        Save the file and open the file <span class="special">button.html</span> in your browser.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see the full file preview.</a></small>
+                </section>
+                <section>
+                    <h3>Code:</h3>
+                    <pre><code>
+&lt;body&gt;
+    &lt;button class="btn"&gt; Button &lt;/button&gt;
+&lt;/body&gt;
+                    </code></pre>
+                    <h3>Preview:</h3>
+                    <div style="height: 200px;background-color:white;">
+                        <button style="font-size: 0.6em;"> Button </button>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Adding Styles:</h3>
+                    <p>Let's add more styles to the Button. It's looking dull:</p>
+                    <ol style="font-size:0.75em;">
+                        <li class="fragment">Create a new <code class="code">&lt;style&gt;</code> element inside the head.</li>
+                        <li class="fragment">Inside this put the following CSS Code:
+                            <pre><code>
+button.btn{
+    color: white;
+    background-color: darkblue;
+}
+                            </code></pre>
+                            <small>This selector(<span class="special">button.btn</span>) asks CSS to select <span class="special">elements which are buttons and have a class "btn".</span></small>
+                        </li>
+                        <li class="fragment">Now add more styles to <span class="special">"button.btn"</span>:
+                            <pre><code>
+font-size: 3em;
+font-weight: bold;                                
+                        </code></pre>
+                            <small>
+                        Basically this will increase the font (text) size to <span class="special"> 3 times(em) </span> the original size 
+                        make the text bold.
+                    </small>
+                        </li>
+                    </ol>
+                    <small><a class="fragment navigate-down">Go down to add more styles</a></small>
+                </section>
+                <section>
+                    <p>Let's change the border styles. Add each of these codes to the <code class="code">button.btn</code> selector
+                        in the style element:</p>
+                    <ol style="font-size:0.8em;">
+                        <li class="fragment"><code class="code">border-color: black;</code>. This will change the border color to black.</li>
+                        <li class="fragment">
+                            <code class="code">border-radius: 0.1em;</code>. This will make the border corners rounder by
+                            0.1 times the text size.
+                            <span class="special">1em</span> takes into account the original text size.</li>
+                        <li class="fragment"><code class="code">border-style:solid;</code>. This changes the border style to a solid color (Other
+                            values include: dotted, dashed).</li>
+                        <li class="fragment"><code class="code">border-width:0.1em;</code>. This will change the width of the border for the button.</li>
+                    </ol>
+                    <button class="fragment" style=" background-color: darkblue;
+                    color: white;
+                    font-size: 1.2em;
+                    border-color: black;
+                    border-radius: 0.1em;
+                    border-style:solid;
+                    border-width:0.05em;">Button</button><br/>
+                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>The CSS Box Model</h3>
+                    <p>
+                        Before proceeding to add more styles we need to understand the CSS box model. This is quite an important thing when styling
+                        HTML elements.
+                    </p>
+                    <p class="fragment">
+                        Every HTML element is like a rectangular box. The <span class="special">CSS box model</span> is essentially
+                        a box that wraps around every HTML element. It consists of: <b>margins, borders, padding, & the actual content. </b>                        Let’s have a look at how this is defined.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down for more CSS Box Model knowledge.</a></small>
+                </section>
+                <section>
+                    <img src="images/cssboxmodel.png" style="border: none !important;height:40vh;" />
+                    <ol style="font-size:0.7em;">
+                        <li class="fragment"><b>Content: </b>In the button that we made the text Button is the content</li>
+                        <li class="fragment"><b>Padding: </b>Just outside the content is a space called padding.</li>
+                        <li class="fragment"><b>Border: </b>And around that padding is the border.</li>
+                        <li class="fragment"><b>Margin: </b>This does not end here. Every element has a margin too outside the element.</li>
+                    </ol>
+                    <p class="fragment">Every HTML element follows this box model and carry all these properties.</p>
+                    <small><a class="fragment navigate-down">Go down to add Padding and Margin to the button. </a></small>
+                </section>
+                <section>
+                    <p>Let's add <span class="special">padding & margin </span> to <span class="special">button.btn</span></p>
+                    <pre><code>
+padding: 0.5em;
+margin: 1em;
+                    </code></pre>
+                    <button class="fragment" style=" background-color: darkblue;
+                    color: white;
+                    padding: 0.5em;
+                    margin: 1em;
+                    font-size: 1.2em;
+                    border-color: black;
+                    border-radius: 0.1em;
+                    border-style:solid;
+                    border-width:0.05em;">Button</button>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Adding Interactivity to the Button</h3>
+                    <p>Let us add some cool styles when the button is hovered by a mouse or is clicked. Till now our CSS Code
+                        is:
+                    </p>
+                    <pre><code>
+button.btn{
+        background-color: darkblue;
+        color: white;
+        font-size: 3em;
+        padding: 0.5em;
+        margin: 1em;
+        font-weight: bold;
+        border-color: black;
+        border-radius: 0.1em;
+        border-style:solid;
+        border-width:0.1em;
+}
+                    </code></pre>
+                    <small><a class="fragment navigate-down">Go down for more </a></small>
+                </section>
+                <section>
+                    <p>Before adding the hover/click events, let's know what a <b>Pseudo Class</b> is in CSS</p>
+                    <p class="fragment">
+                        Pseudo class adds a new style to the button on certain actions from the user. For example to change styles when the mouse
+                        is hovered over an element, simply add a new <span class="special">Pseudo-Class: "hover"</span>
+                    </p>
+                    <div class="fragment">
+                        <p>Change the style element to this code:</p>
+                        <pre><code>
+<style>
+    button.btn{
+        .....
+    }
+
+    button.btn:hover{
+        background-color: lightblue;
+    }
+</style>
+                        </code></pre>
+                    </div>
+                    <small><a class="fragment navigate-down">Go down to see how pseudo class acts</a></small>
+                </section>
+                <section>
+                    <p>
+                        Pseudo Class basically adds new styles to the original set of CSS. We simply create a new set of styles with
+                        <span class="special">:[action]</span> on the original selector.
+                    </p>
+                    <p class="fragment">
+                        Here we created a new set of styles with the <span class="special">:hover</span> action (pseudo class).
+                        This will change your add the new styles to button when it is hovered by the mouse.
+                    </p>
+                    <p class="fragment">Save your file and refresh the browser. Now, try to hover over the button.</p>
+                    <button class="fragment btn">Button</button>
+                </section>
+                <section>
+                    <p>Let's add a new pseudo-class when the button is clicked or is <span class="special">active</span>. Add
+                        the following styles:</p>
+                    <pre><code>
+button.btn{
+    ....
+}
+button.btn:hover{
+    ...
+}
+button.btn:active{
+    background-color:white;
+    color: darkblue;
+}
+                    </code></pre>
+                    <button class="fragment btn">Button</button><br/>
+                    <p class="fragment">Now try clicking the element.</p>
+                </section>
+            </section>
+            <!-- 7z installation -->
+            <section>
+                <section>
+                    <h3>Adding a Shadow to the element.</h3>
+                    <p>Let's add a shadow to the element when it is hovered or clicked.</p>
+                    <pre><code>
+<style>
+    .....
+button.btn:hover{
+    ....
+    box-shadow: 0.2em 0.2em 1em grey;
+}
+button.btn:active{
+    ....
+    box-shadow: 0.2em 0.2em 1em grey;
+}
+</style>
+                    </code></pre>
+                    <button class="fragment btn">Button</button><br/>
+                    <small><a class="fragment navigate-down">Go down to know more about box-shadow</a></small>
+                </section>
+                <section>
+                    <p>The Box Shadow has many values that can be written in one line in one property instead of multiple-lines.</p>
+                    <ol style="font-size:0.8em;">
+                        <li class="fragment">The first value (0.2em) is the horizontal distance of the shadow right from the border of the button
+                            element
+                        </li>
+                        <li class="fragment">The second value (0.2em) is the vertical distance below the shadow from the border of the button
+                        </li>
+                        <li class="fragment">
+                            The third value(1em) is how much blur you want in the shadow.
+                        </li>
+                        <li class="fragment">
+                            And the fourth value (grey) is the color of the shadow
+                        </li>
+                    </ol>
+                    <p class="fragment">The border can also be written in the same way in a single line. Let's look at that in the slide below.</p>
+                    <small><a class="fragment navigate-down">Go down to change border styles</a></small>
+                </section>
+                <section>
+                    <p>Let's change the border properties to make it a one liner.</p>
+                    <pre><code>
+button.btn{
+    background-color: darkblue;
+    color: white;
+    font-size: 3em;
+    padding: 0.5em;
+    margin: 1em;
+    font-weight: bold;
+    border-radius: 0.1em;
+    border: solid 1em black;
+}
+                    </code></pre>
+                    <p class="fragment">We add a new property border and give it 3 values separated by space. Here <span class="special">border-style</span>                        is the <span class="special">first </span>value,
+                        <span class="special">border-width</span> is the <span class="special">second</span> & <span class="special">border-color</span>                        is the <span class="special">third</span>.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see the final CSS Code</a></small>
+                </section>
+                <section>
+                    <pre><code>
+button.btn{
+    background-color: darkblue;
+    color: white;
+    font-size: 3em;
+    padding: 0.5em;
+    margin: 1em;
+    font-weight: bold;        
+    border-radius: 0.1em;
+    border: solid 1em black;        
+}
+
+button.btn:hover{
+    background: blue;
+    box-shadow: 0.2em 0.2em 1em grey;
+}
+    
+button.btn:active{
+    background-color: white;
+    color: darkblue;
+    box-shadow: 0.2em 0.2em 1em grey;
+}
+                    </code></pre>
+                    <button class="btn">Button</button>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Adding more than 1 class/id</h3>
+                    <p>We can also add more than one class/id in an element. All you have to do is to put the second/third class/id
+                        name inside the <span class="special">class</span> attribute with a space in between.
+                    </p>
+                    <p class="fragment">
+                        e.g. <span class="special">class="class1 class2"</span>
+                    </p>
+                    <p class="fragment">
+                        So, if we add any set of styles to the second/third class they will be added to the already added styles.
+                    </p>
+                    <p class="fragment">
+                        And the style that is declared later is always displayed.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see how to do that</a></small>
+                </section>
+                <section>
+                    <p>Create a new button in the <span class="special">body</span> element with two classes like this:</p>
+                    <pre><code><button class="btn primary">Button Primary</button></code></pre>
+                    <p class="fragment">Let's add a new set of styles for the <span class="special">primary</span> class. Add the following styles
+                        below the <span class="special">btn</span> styles:</p>
+                    <pre class="fragment"><code>
+button.btn{...}
+button.primary{
+    background-color: teal;
+}                       
+                    </code></pre>
+                    <p class="fragment">Check the new button in the browser:</p>
+                    <div class="fragment">
+                        <button class="btn">Button</button>
+                        <button class="btn primary">Button Primary</button>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>HTML Color Codes</h3>
+                    <p>
+                        Writing Colors in HTML with Color Codes is a difficult thing to remember.
+                    </p>
+                    <p class="fragment">
+                        So, there two fantastic ways to write the color we want to display.
+                    </p>
+                    <ol class="fragment">
+                        <li>Hexa-Decimal Values</li>
+                        <li>As RGB Values</li>
+                    </ol><br/>
+                    <small><a class="fragment navigate-down">Go down to see what they are</a></small>
+                </section>
+                <section>
+                    <h3>Hexa-Decimal Values</h3>
+                    <p>It is written as <b>#rrggbb</b> where <b>rr, gg & bb</b> are color codes of the
+                        <b>red</b>, <b>green</b> & <b>blue</b> colors respectively.</p>
+                    <p class="fragment">Examples of a few colors:</p>
+                    <table style="font-size:0.8em;" class="fragment">
+                        <thead>
+                            <th>Color Name</th>
+                            <th>Color Hexadecimal Code</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Black</td>
+                                <td>#00000</td>
+                            </tr>
+                            <tr>
+                                <td>Red</td>
+                                <td>#ff0000</td>
+                            </tr>
+                            <tr>
+                                <td>white</td>
+                                <td>#ffffff</td>
+                            </tr>
+                            <tr>
+                                <td>yellow </td>
+                                <td>#ffff00</td>
+                            </tr>
+                            <tr>
+                                <td>etc........</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small><a class="fragment navigate-down">Go down to see how RGBA colors are written</a></small>
+                </section>
+                <section>
+                    <p>Colors can also be represented as separate values of Red, Green, Blue and opacity using <span class="special"> rgba(red, green, blue, opacity). </span>                        </p>
+                    <p class="fragment">The values of red, blue & green range from 0-255 and of opacity is 0-1.</p>
+                    <table style="font-size:0.8em;" class="fragment">
+                        <thead>
+                            <th>Color Name</th>
+                            <th>Color RBGA Code</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Black with full opacity</td>
+                                <td>rgba(0,0,0,1)</td>
+                            </tr>
+                            <tr>
+                                <td>Red with no opacity (doesn't show)</td>
+                                <td>rgba(255, 0, 0, 0 ) </td>
+                            </tr>
+                            <tr>
+                                <td>White with 0.4 opacity</td>
+                                <td>rgba(255,255,255,1)</td>
+                            </tr>
+                            <tr>
+                                <td>etc........</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small><a class="fragment navigate-down">Go down to see where you can refer to all the color codes</a></small>
+                </section>
+                <section>
+                    <p>Remembering all the color code is a pain. We will see how we solve that problem with Visual Studio Code.
+                    </p>
+                    <ol style="font-size:0.8em;">
+                        <li>First remove the background color in <span class="special">button.primary</span> style in the
+                            <span class="special">button.html</span> file.
+                            <pre><code>
+btn.primary{
+    background-color: ;
+}                            </code></pre>
+                        </li>
+                        <li>Then type rgba as the value press <span class="special">TAB</span> key.</li>
+                        <li>Hover over the letters <span class="special">rgba</span></li>
+                        <li>A small pop-up comes up giving you a choice of colors</li>
+                        <li>
+                            Simply select a color of your choice. You don't even have to worry about the HTML Color Code. It will be automatically generated.
+                        </li>
+                    </ol>
+                    <small><a class="fragment navigate-down">Go down to see a live preview.</a></small>
+                </section>
+                <section>
+                    <h3>Video on choosing colors with VS Code.</h3>
+                    <p>
+                        If you are still not happy with this color choice, visit
+                        <a href="www.htmlcolorcodes.com">HTMLColorCodes.com</a> to get a HTML Color Code for your choice
+                        of color.
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Creating Stylish Buttons</h3>
+                    <p>
+                        Now we have a two Buttons at our disposal. We will make a few changes to make it production ready and better looking.
+                    </p>
+                    <p class="fragment">
+                        This will be your <span class="special">Homework</span> for the day. Try to modify the buttons and
+                        the style we wrote for making the following buttons with the <span class="special">rules</span>:
+                    </p>
+                    <ol style="font-size:0.6em;" class="special fragment">
+                        <li>margin:0;</li>
+                        <li>padding: 0.4em;</li>
+                        <li>font-size: 1em;</li>
+                        <li>font-weight: normal;</li>
+                    </ol><br/>
+                    <small><a class="fragment navigate-down">Go down to see the rest of the Homework rules.</a></small>
+                </section>
+                <section>
+                    <p>
+                        The classes of the 5 buttons with their colors & background-colors should be as follows:
+                    </p>
+                    <table style="font-size:0.45em;">
+                        <thead>
+                            <th>Classes</th>
+                            <th>color</th>
+                            <th>color on(:hover) & on(:active)</th>
+                            <th>background-color</th>
+                            <th>background-color (:hover)</th>
+                            <th>background-color (:active)</th>
+                            <th>border-color</th>
+                            <th>border-color (:active)</th>
+                            <th>box-shadow-color (:hover)</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"btn"</td>
+                                <td>rgba(67, 9, 255,1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(67, 9, 255,1)</td>
+                                <td>rgba(120, 79, 253,1)</td>
+                                <td>rgba(67, 9, 255,1)</td>
+                                <td>rgba(120, 79, 253,1)</td>
+                                <td>rgba(67, 9, 255,1)</td>
+                            </tr>
+                            <tr>
+                                <td>"btn primary"</td>
+                                <td>rgba(5, 151, 255, 1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(5, 151, 255, 1)</td>
+                                <td>rgba(69, 176, 252,1)</td>
+                                <td>rgba(5, 151, 255, 1)</td>
+                                <td>rgba(69, 176, 252,1)</td>
+                                <td>rgba(5, 151, 255, 1)</td>
+                            </tr>
+                            <tr>
+                                <td>"btn danger"</td>
+                                <td>rgba(219, 6, 26, 1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(219, 6, 26, 1)</td>
+                                <td>rgba(242, 48, 67,1)</td>
+                                <td>rgba(219, 6, 26, 1)</td>
+                                <td>rgba(242, 48, 67,1)</td>
+                                <td>rgba(219, 6, 26, 1)</td>
+                            </tr>
+                            <tr>
+                                <td>"btn success"</td>
+                                <td>rgba(72, 197, 5, 1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(72, 197, 5, 1)</td>
+                                <td>rgba(133, 226, 83,1)</td>
+                                <td>rgba(72, 197, 5, 1)</td>
+                                <td>rgba(133, 226, 83,1)</td>
+                                <td>rgba(72, 197, 5, 1)</td>
+                            </tr>
+                            <tr>
+                                <td>"btn warning"</td>
+                                <td>rgba(255, 162, 0,1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(255,255,255,1)</td>
+                                <td>rgba(255, 162, 0,1)</td>
+                                <td>rgba(255, 206, 0,1)</td>
+                                <td>rgba(255, 162, 0,1)</td>
+                                <td>rgba(255, 206, 0,1)</td>
+                                <td>rgba(255, 162, 0,1)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <small><a class="fragment navigate-down">Go down to see the Buttons preview</a></small>
+                </section>
+                <section>
+                    <style>
+                        button.btned {background-color: white; color: rgba(67, 9, 255, 1);font-size: 0.8em;
+                            padding: 0.4em; margin: 0em;font-weight: normal;border-radius: 1.2em; border: solid 0.1em rgba(67, 9, 255, 1);
+                        }
+                        button.btned:hover {background: rgba(67, 9, 255, 1);color: white;box-shadow: 0 0 1em rgba(67, 9, 255, 1);
+                        }
+                        button.btned:active {background-color: rgba(120, 79, 253, 1);border-color: rgba(120, 79, 253, 1);
+                        }
+                        button.primary2 {background-color: white;color: rgba(5, 151, 255, 1);border-color: rgba(5, 151, 255, 1);
+                        }
+                        button.primary2:hover {background: rgba(5, 151, 255, 1);color: white;box-shadow: 0 0 1em rgba(5, 151, 255, 1);
+                        }button.primary2:active {background: rgba(69, 176, 252, 1);border-color: rgba(69, 176, 252, 1);
+                        }
+                        button.danger {background-color: white;color: rgba(219, 6, 26, 1);
+                            border-color: rgba(219, 6, 26, 1);
+                        }
+                        button.danger:hover {background: rgba(219, 6, 26, 1);color: white;box-shadow: 0 0 1em rgba(219, 6, 26, 1);
+                        }
+                        button.danger:active {background: rgba(242, 48, 67, 1);border-color: rgba(242, 48, 67, 1);
+                        }
+                        button.success {background-color: white;color: rgba(72, 197, 5, 1);border-color: rgba(72, 197, 5, 1);
+                        }                   button.success:hover { background: rgba(72, 197, 5, 1);
+                            color: white;box-shadow: 0 0 1em rgba(72, 197, 5, 1);   }
+                        button.success:active {background: rgba(133, 226, 83, 1);border-color: rgba(133, 226, 83, 1);
+                        }
+                        button.warning {background-color: white;color: rgba(255, 162, 0, 1);border-color: rgba(255, 162, 0, 1);
+                        }
+                        button.warning:hover {background: rgba(255, 162, 0, 1);color: white;box-shadow: 0 0 1em rgba(255, 162, 0, 1);
+                        }
+                        button.warning:active {background: rgba(255, 206, 0, 1);border-color: rgba(255, 206, 0, 1);
+                        }
+                    </style>
+                    <h3>Preview</h3>
+                    <button class="btned "> Normal Button </button>
+                    <button class="btned primary2">Primary Button </button>
+                    <button class="btned danger">Danger Button</button><br/><br/>
+                    <button class="btned success">Success Button</button>
+                    <button class="btned warning">Warning Button</button>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Time to update the Git Repository.</h3>
+                    <p>Remember that you have uploaded this repository <span class="special">2-html-css-code-empire</span> to
+                        GitHub.</p>
+                    <p class="fragment">Now that you have created a new file and made a few buttons, its time to update the Git repository.</p>
+                    <p class="fragment">For these instructions follow the slide below.</p>
+                    <small><a class="fragment navigate-down">Go down to git update</a></small>
+                </section>
+                <section>
+                    <p>Instructions for updating the new code to GitHub.</p>
+                    <ol style="font-size:0.8em;">
+                        <li class="fragment">Save all the files in the <span class="special">2-html-css-code-empire</span> using (Ctrl+S)</li>
+                        <li class="fragment">Then go inside the folder in File Explorer/ Windows Explorer and then <span class="special"> right click > Open Hyper here</span></li>                        
+                        <li class="fragment">Type <code class="code">git add .</code> and hit <span class="special">ENTER</span> key. This adds all the new changes in the repository to be processed for uploading.</li>
+                        <li class="fragment">Type <code class="code">git commit -m "I made new HTML Tutorial Files"</code> and hit ENTER. This actually finalizes the new changes to be processed.</li>
+                        <li class="fragment">Finally type <code class="code">git push origin master</code> and hit ENTER. This will update your GitHub repository according to the local repository.</li>
+                    </ol>
+                </section>
+            </section>
+
+            <section>
+                <h3>HELP</h3>
+                <p>If you are facing any problems with these HTML/CSS tutorials please ask them on<a href="https://gitter.im/The-Code-Empire-Help/HTML-CSS">The Code Empire Gitter HTML/CSS Help.</a>                    Ask your queries there. </p>
+            </section>
+            <section>
+                <h3>Finished HTML/CSS Part 2 (Day 4)!</h3>
+                <p>In the next tutorial we will be creating a CSS Grid & learn about the Flexbox model.
+                </p>
+                <p>That is all for today. Let's start Day 5 and continue with HTML/CSS.
+                </p>
+                <p>Click <a href="">HERE</a> for our next lesson</p>
+                <p>Click <a href="">HERE</a> for our the course map</p>
+            </section>
+
+            </div>
+        </div>
+
+        <script src="js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                dependencies: [{
+                        src: 'js/markdown/marked.js'
+                    },
+                    {
+                        src: 'js/markdown/markdown.js'
+                    },
+                    {
+                        src: 'js/notes/notes.js',
+                        async: true
+                    },
+                    {
+                        src: 'js/zoom.js',
+                        async: true
+                    },
+                    {
+                        src: 'js/highlight.js',
+                        async: true,
+                        callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    }
+                ]
+            });
+        </script>
+</body>
+
+</html>
