@@ -1,0 +1,1173 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Introduction to Code Empire">
+    <meta name="author" content="Himujjal">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>HTML & CSS 2 (Day 4)</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/sky.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style>
+        p {
+            font-size: 0.8em !important;
+        }
+
+        h3 {
+            color: #0078ad !important;
+        }
+
+        .browser-preview {
+            background-color: white;
+            color: black;
+            font-size: 0.6em !important;
+            text-align: left;
+        }
+
+        .special {
+            color: #0078ad;
+            font-weight: bolder !important;
+        }
+
+        .code {
+            background: #3f3f3f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <div style="position:absolute;top:10px;left:10px;z-index:999;">
+        <a href="#">
+            <span>
+                <img height="70px" width="auto" src="images/CE.jpg" alt="Logo" />
+            </span>
+
+        </a>
+    </div>
+
+    <!-- The Slides start here -->
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide -->
+            <section>
+                <h2>HTML & CSS Part 2
+                    <span class="special"> (DAY 5) </span>
+                </h2>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Make our own Grid!</h3>
+                    <p style="font-size:0.8em;">In Day 5 of our course we shall continue to work on our HTML/CSS Skills and learn a few more things needed
+                        to make websites.</p>
+                    <p class="fragment">
+                        Today we will make a CSS grid framework of our own and learn what is the flexbox model.
+                    </p>
+                    <p class="fragment">
+                        Today is going to be a bit difficult tutorial. So, don't skip a single word!
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see the solution to your homework! </a>
+                    </small>
+                </section>
+                <section>
+                    <p>
+                        I hope you have done your homework for yesterday's lesson. If not please complete it. It is very important to do so as we
+                        will be using those five buttons a lot in the upcoming lessons.
+                    </p>
+                    <p class="fragment">
+                        The solution to your homework was very simple indeed. All you had to do is to replicate the two buttons with the Rules given
+                        to you. Go
+                        <a class="navigate-down">DOWN</a> to see the complete code for that.
+                    </p>
+                </section>
+                <section>
+                    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en">
+
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
+    &lt;title>Buttons&lt;/title>
+    &lt;style>
+    button.btn{
+        background-color: white;
+        color: rgba(67, 9, 255,1) ;
+        font-size: 1.3em;
+        padding: 0.4em;
+        margin: 0em;
+        font-weight: normal;        
+        border-radius: 0.2em;
+        border: solid 0.1em rgba(67, 9, 255,1);        
+    }
+
+    button.btn:hover{
+        background: rgba(67, 9, 255,1);
+        color: white;
+        box-shadow: 0 0 1em rgba(67, 9, 255,1);
+    }
+    
+    button.btn:active{
+            background-color: rgba(120, 79, 253,1);
+            border-color: rgba(120, 79, 253,1);
+    }
+
+    button.primary{
+        background-color: white;    
+        color: rgba(5, 151, 255, 1);
+        border-color: rgba(5, 151, 255, 1);
+    }
+
+    button.primary:hover{
+        background: rgba(5, 151, 255, 1);
+        color: white;
+        box-shadow: 0 0 1em rgba(5, 151, 255, 1);
+    }
+
+    button.primary:active{
+        background:rgba(69, 176, 252,1);
+        border-color: rgba(69, 176, 252,1);
+    }
+
+    button.danger{
+        background-color: white;
+        color: rgba(219, 6, 26, 1);
+        border-color: rgba(219, 6, 26, 1);
+    }
+
+    button.danger:hover{
+        background: rgba(219, 6, 26, 1);
+        color: white;
+        box-shadow: 0 0 1em rgba(219, 6, 26, 1);
+    }
+
+    button.danger:active{
+        background:rgba(242, 48, 67,1);
+        border-color: rgba(242, 48, 67,1);
+    }
+
+    button.success{
+        background-color: white;
+        color: rgba(72, 197, 5, 1);
+        border-color: rgba(72, 197, 5, 1);
+    }
+
+    button.success:hover{
+        background: rgba(72, 197, 5, 1);
+        color: white;
+        box-shadow: 0 0 1em rgba(72, 197, 5, 1);
+    }
+
+    button.success:active{
+        background:rgba(133, 226, 83,1);
+        border-color: rgba(133, 226, 83,1);
+    }
+
+    button.warning{
+        background-color: white;
+        color:rgba(255, 162, 0,1);
+        border-color: rgba(255, 162, 0, 1);
+    }
+
+    button.warning:hover{
+        background: rgba(255, 162, 0, 1);
+        color: white;
+        box-shadow: 0 0 1em rgba(255, 162, 0, 1);
+    }
+
+    button.warning:active{
+        background:rgba(255, 206, 0,1);
+        border-color: rgba(255, 206, 0,1);
+    }
+
+
+    &lt;/style>
+&lt;/head>
+
+&lt;body>
+    &lt;button class="btn"> Normal Button &lt;/button>
+    &lt;button class="btn primary">Primary Button &lt;/button>
+    &lt;button class="btn danger">Danger Button&lt;/button>
+    &lt;button class="btn success">Success Button&lt;/button>
+    &lt;button class="btn warning">Warning Button&lt;/button>
+&lt;/body>
+
+&lt;/html>
+                    </code></pre>
+                    <p>First compare this code with yours and then try to find your mistakes. Then correct them!</p>
+                </section>
+            </section>
+
+            <section>
+                <h3>HELP</h3>
+                <p>For any kind of Help regarding
+                    <span class="special">HTML & CSS</span> Lesson don't hesitate to ask them on
+                    <a href="https://gitter.im/The-Code-Empire-Help/HTML-CSS">The Code Empire Gitter HTML and CSS Help.</a>
+                </p>
+            </section>
+
+            <!-- Slide -->
+
+            <section>
+                <section>
+                    <h3>Let's learn what is the
+                        <br>"FLEXBOX MODEL"</h3>
+                    <p>
+                        The FlexBox model along with a CSS grid actually allows you to create a skeleton of a website. Many hours of work is saved
+                        if the skeleton is proper.
+                    </p>
+                    <p class="fragment">
+                        The
+                        <span class="special">Flexbox Model</span> let's you decide how your elements in your webpage are placed or aligned.
+                    </p>
+                    <p class="fragment">
+                        Let's get into action. Open the
+                        <span class="special">2-html-css-code-empire</span> folder in VS Code. (Right Click on the folder)
+                    </p>
+                    <p class="fragment">
+                        Create a new file inside
+                        <span class="special">tutorials</span> folder. Name the file:
+                        <span class="special">3-flexbox.html</span>
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see the file structure</a>
+                    </small>
+                </section>
+                <section>
+                    <p>Make sure you use the
+                        <span class="special">html:5</span> shortcut to fill the file as follows:</p>
+                    <img src="images/vscode1.jpg" alt="VS Code 1">
+                    <p class="fragment">We are ready to get started now.</p>
+                    <small>
+                        <a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a>
+                    </small>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h3>Start with the basic code:</h3>
+                    <pre><code>
+<style>
+  
+</style>
+&lt;body>
+    <div class="container">
+        <div class="item" id="i1"> 1 </div>
+        <div class="item" id="i2"> 2 </div>
+        <div class="item" id="i3"> 3 </div>
+        <div class="item" id="i4"> 4 </div>
+        <div class="item" id="i5"> 5 </div>
+        <div class="item" id="i6"> 6 </div>
+        <div class="item" id="i7"> 7 </div>
+        <div class="item" id="i8"> 8 </div>
+    </div>
+&lt;/body>
+                    </code></pre>
+                    <p>
+                        <span class="special">Note</span>: From now on I shall only be writing what's inside the style element and the body element.
+                        Rest is not important now
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see what we shall do further.</a>
+                    </small>
+                </section>
+                <section>
+                    <p>
+                        Hope you know the what
+                        <span class="special">parent</span> and
+                        <span class="special">child</span> elements are. In the above code, the
+                        <code class="code">div</code> with the
+                        <span class="special">class="container"</span>
+                        is the
+                        <span class="special">parent</span> element.
+                        <br> The
+                        <code class="code">div</code>'s with the
+                        <span class="special">class="item"</span>
+                        are the child elements.
+                    </p>
+                    <p class="fragment">Basically any element that is present inside another outer element is the child element.</p>
+                    <p class="fragment">
+                        Here we have give
+                        <span class="special">id</span>s to the 8 child elements ranging from
+                        <span class="special">i1-i8</span>
+                    </p>
+                    <small>
+                        <a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a>
+                    </small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Display: Flex;</h3>
+                    <p>
+                        We shall now provide a style to the
+                        <span class="special">container</span> class element. Add the following code inside the
+                        <code class="code">style</code> element:
+                    </p>
+                    <pre><code>
+&lt;style>
+    .container {
+        display: flex;
+    }
+&lt;/style>
+                    </code></pre>
+                    <p class="fragment">
+                        Now open the file
+                        <span class="special">3-flexbox.html</span> in your browser.
+                    </p>
+                    <p class="fragment">
+                        Notice that despite
+                        <code class="code">div</code> being a
+                        <span class="special">block</span>
+                        element the numbers from 1-8 are all aligned in a single line. That is the block elements now become inline.
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see the browser preview</a>
+                    </small>
+                </section>
+                <section>
+                    <p>It must be displayed this way in your browser:</p>
+                    <div class="browser-preview">12345678</div>
+                    <p>Let's add some more styles to
+                        <span class="special">container</span> div and see what is the result now. Change the container styles to this:</p>
+                    <pre><code>
+.container {
+    display: flex;
+    flex-direction: column;
+}                    
+                    </code></pre>
+                    <p class="fragment">Save the file in VS Code (Ctrl+S) and then refresh the page in the browser(F5).</p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see the preview in the browser:</a>
+                    </small>
+                </section>
+                <section>
+                    <div class="browser-preview">
+                        1
+                        <br> 2
+                        <br> 3
+                        <br> 4
+                        <br> 5
+                        <br> 6
+                        <br> 7
+                        <br> 8
+                        <br>
+                    </div>
+                    <p>There you go. A simple change of
+                        <span class="special">flex-direction</span> makes the items get aligned vertically instead of horizontally. </p>
+                    <small>
+                        <a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a>
+                    </small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Explanation of "flex-direction"</h3>
+                    <p>
+                        So, first we gave a style to
+                        <code class="code">container</code> class div,
+                        <span class="special">(display:flex;)</span>. This basically converts the
+                        <span class="special">parent element</span> ("container" div) to a
+                        <span class="special">flex-container</span>.
+                    </p>
+                    <p class="fragment">
+                        And this converts all the elements inside the
+                        <span class="special">flex-container</span> to
+                        <span class="special">flex-items</span>. Simple as that.
+                    </p>
+                    <p class="fragment">
+                        <span class="special">NOTE:</span> The flex-items are the ones who are immediate children to the flex-container and must
+                        be an HTML element. Any text written inside the
+                        <span class="special">flex-container</span> are not
+                        <span class="special">flex-items</span>
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down for more flexbox model knowledge.</a>
+                    </small>
+                </section>
+                <section>
+                    <p>
+                        You previously saw that as soon as you change the
+                        <span class="special">flex-direction:column;</span>. The
+                        <span class="special">flex-items</span> get aligned
+                        <span class="special">vertically</span>.
+                    </p>
+                    <p class="fragment">
+                        By default, the direction of the
+                        <span class="special">flex-items</span> is
+                        <span class="special">row</span> or
+                        <span class="special">horizontal</span>.
+                    </p>
+                    <div style="display:flex;justify-content:space-around;flex-direction:column" class="fragment">
+                        <div>
+                            <p>Before (
+                                <span class="special">flex-direction: row;</span>):</p>
+                            <div class="browser-preview">
+                                12345678
+                            </div>
+                        </div>
+                        <div>
+                            <p>After (
+                                <span class="special">flex-direction: column;</span>):</p>
+                            <div class="browser-preview">
+                                1
+                                <br> 2
+                                <br> 3
+                                <br> 4
+                                <br> 5
+                                <br> 6
+                                <br> 7
+                                <br> 8
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see more. </a>
+                    </small>
+                </section>
+                <section>
+                    <p>Now, let's give some more style to the elements. Make sure your style element is as follows:</p>
+                    <pre><code>
+&lt;style>
+    body{
+        margin:0;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+
+        width: 100vw;
+        background-color: #000;
+    }
+
+    .item {
+        color: #fff;
+        font-size: 3em;
+    }
+
+    #i1{background-color: #ff0000;}
+    #i2{background-color: #ff7c00;}
+    #i3{background-color: #fff700;}
+    #i4{background-color: #64ff00;}
+    #i5{background-color: #00ff8b;}
+    #i6{background-color: #0070ff;}
+    #i7{background-color: #0f00ff;}
+    #i8{background-color: #d100ff;}
+&lt;/style>
+                    </code></pre>
+                    <p class="fragment">
+                        Nothing much here. Simple styles to the
+                        <span class="special">flex-items</span>
+                        and
+                        <span class="special">flex-container</span> We will discuss
+                        <span class="special">width:vw;</span>
+                        in details later.
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see the preview.</a>
+                    </small>
+                </section>
+                <section>
+                    <p>Refresh your browser to see the following:</p>
+                    <div style=" display: flex;flex-direction: row;background-color: #000;">
+                        <div style="color: #fff;font-size: 2em;background-color: #ff0000;"> 1 </div>
+                        <div style="color: #fff;font-size: 2em;background-color: #ff7c00;"> 2 </div>
+                        <div style="color: #fff;font-size: 2em;background-color: #fff700;"> 3 </div>
+                        <div style="color: #fff;font-size: 2em;background-color: #64ff00;"> 4 </div>
+                        <div style="color: #fff;font-size: 2em;background-color: #00ff8b;"> 5 </div>
+                        <div style="color: #fff;font-size: 2em;background-color: #0070ff;"> 6 </div>
+                        <div style="color: #fff;font-size: 2em;background-color: #0f00ff;"> 7 </div>
+                        <div style="color: #fff;font-size: 2em;background-color: #d100ff;"> 8 </div>
+                    </div>
+                    <p class="fragment">
+                        Notice that the
+                        <span class="special">flex-direction</span> property is
+                        <code class="code">row</code> now.
+                    </p>
+                    <p class="fragment">
+                        <span class="special">TASK:</span> Change the flex-direction property to:
+                        <br/>
+                        <span class="special">column</span>,
+                        <br>
+                        <span class="special">row-reverse</span>,
+                        <br>
+                        <span class="special">column-reverse</span>
+                        <br/>one by one
+                    </p>
+                    <p class="fragment">
+                        What do you notice? The alignments of the
+                        <span class="special">flex-items</span> change.
+                    </p>
+                    <small class="fragment">
+                        <span class="special">NOTE:</span> Don't worry. We will rarely or not at all use
+                        <span class="special">column-reverse</span> and
+                        <span class="special">row-reverse</span>. It is just for your knowledge.
+                    </small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Cross & Main Axis and "justify-content"</h3>
+                    <p>
+                        Before flexbox model was introduced in Web Designing it was a pain to align children elements accordingly inside the parent
+                        element. Flexbox model has two awesome properties that helps us to do so very easily.
+                    </p>
+                    <p class="fragment">
+                        Before we move on to that we need to know what
+                        <span class="special">cross-axis</span> and
+                        <span class="special">main-axis</span> are.
+                    </p>
+                    <p class="fragment">
+                        These two axises are imaginary lines that passes through a flex-container. We only imagine them to make a reference. Let's
+                        see what are they.
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to know about the two axises</a>
+                    </small>
+                </section>
+                <section>
+                    <h3>Cross-Axis & Main-Axis</h3>
+                    <p>
+                        Cross-Axis and Main-Axis depend upon the property,
+                        <span class="special">flex-direction</span>
+                        of the
+                        <span class="special">flex-container</span>.
+                    </p>
+                    <p class="fragment">When the flex-container has
+                        <span class="special">flex-direction: row;</span>, the main-axis and the cross-axis are as follows:</p>
+                    <img src="images/flexbox-main.png" style="border:none;box-shadow:none;" height="300px" width="auto" class="fragment" />
+                    <br/>
+                    <small>
+                        <a class="fragment navigate-down">Go down to know more on axises</a>
+                    </small>
+                </section>
+                <section>
+                    <p>
+                        When the flex-container has
+                        <span class="special">flex-direction: column;</span>. The
+                        <span class="special">main and cross axis</span> interchange. Main Axis now is vertical and cross axis now is horizontal.
+                    </p>
+                    <img src="images/flexbox2.jpg" height="400px" style="border:none;">
+                    <br>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see about justify-content & align-items</a>
+                    </small>
+                </section>
+                <section>
+                    <p>Let's discuss what
+                        <span class="special">justify-content</span> is first.</p>
+                    <p class="fragment">
+                        <span class="special">Justify-content</span> is a CSS property that helps us align the
+                        <span class="special">flex-items</span> along the
+                        <span class="special">main-axis</span>
+                        of a
+                        <span class="special">flex-container</span>.
+                    </p>
+                    <p class="fragment">
+                        It has five values:
+                    </p>
+                    <ul class="fragment" style="font-size:0.8em;">
+                        <li>flex-start</li>
+                        <li>flex-end</li>
+                        <li>center</li>
+                        <li>space-around</li>
+                        <li>space-between</li>
+                    </ul><br>
+                    <small><a class="fragment navigate-down">Go down to see implementation of the five values:</a></small>
+                </section>
+                <section>
+                    <p>
+                        Now simply add the following code in the <span class="special">&lt;style&gt;</span> element of
+                        <span class="special">3-flexbox.html</span> file.
+                     </p>
+                     <pre class="fragment"><code>
+&lt;style>
+    .container {
+        ...
+        justify-content: flex-end;
+    }
+    ...
+&lt;/style>
+                     </code></pre>
+                     <p class="fragment">The <span class="special">default</span> value (value before you declare) of 
+                        <span class="special">justify-content</span> is <span class="special">flex-start</span></p>
+                    <p class="fragment">Refresh your browser. And go <a class="navigate-down">down</a> to see the preview.</p>
+                    </section>
+                    <section>
+                        <style>
+                           .container-1{
+                            display: flex;
+                            flex-direction: row;             
+                            background-color: #000;   
+                            justify-content: flex-start;                   
+                          }     
+                          .align-end{height:30vh;align-content: flex-end; flex-wrap:wrap;}
+                          .align-between{height:30vh;align-content: space-between; flex-wrap: wrap;}
+                          .container-jc-end{  justify-content: flex-end; } 
+                          .container-jc-center{  justify-content: center; } 
+                          .container-jc-between{  justify-content: space-between; }     
+                          .container-jc-around{  justify-content: space-around; }           
+                          .item-align{padding: 0.2em 2em !important}          
+                          .item-1 { color: #fff;font-size: 3em;}                      
+                          #i1{background-color: #ff0000;}
+                          #i2{background-color: #ff7c00;}
+                          #i3{background-color: #fff700;}
+                          #i4{background-color: #64ff00;}
+                          #i5{background-color: #00ff8b;}
+                          #i6{background-color: #0070ff;}
+                          #i7{background-color: #0f00ff;}
+                          #i8{background-color: #d100ff;}
+                        </style>
+                        <p><span class="special">justify-content: flex-start;</span>(default value)</p>
+                        <div class="container-1">
+                            <div class="item-1" id="i1"> 1 </div>
+                            <div class="item-1" id="i2"> 2 </div>
+                            <div class="item-1" id="i3"> 3 </div>
+                            <div class="item-1" id="i4"> 4 </div>
+                            <div class="item-1" id="i5"> 5 </div>
+                            <div class="item-1" id="i6"> 6 </div>
+                            <div class="item-1" id="i7"> 7 </div>
+                            <div class="item-1" id="i8"> 8 </div>
+                        </div>
+                        <p><span class="special">justify-content: flex-end;</span></p>
+                        <div class="container-1 container-jc-end">
+                            <div class="item-1" id="i1"> 1 </div>
+                            <div class="item-1" id="i2"> 2 </div>
+                            <div class="item-1" id="i3"> 3 </div>
+                            <div class="item-1" id="i4"> 4 </div>
+                            <div class="item-1" id="i5"> 5 </div>
+                            <div class="item-1" id="i6"> 6 </div>
+                            <div class="item-1" id="i7"> 7 </div>
+                            <div class="item-1" id="i8"> 8 </div>
+                        </div>
+                        <p><span class="special">justify-content: center;</span></p>
+                        <div class="container-1 container-jc-center">
+                            <div class="item-1" id="i1"> 1 </div>
+                            <div class="item-1" id="i2"> 2 </div>
+                            <div class="item-1" id="i3"> 3 </div>
+                            <div class="item-1" id="i4"> 4 </div>
+                            <div class="item-1" id="i5"> 5 </div>
+                            <div class="item-1" id="i6"> 6 </div>
+                            <div class="item-1" id="i7"> 7 </div>
+                            <div class="item-1" id="i8"> 8 </div>
+                        </div>
+                        <p><span class="special">justify-content: space-around;</span></p>
+                        <div class="container-1 container-jc-around">
+                            <div class="item-1" id="i1"> 1 </div>
+                            <div class="item-1" id="i2"> 2 </div>
+                            <div class="item-1" id="i3"> 3 </div>
+                            <div class="item-1" id="i4"> 4 </div>
+                            <div class="item-1" id="i5"> 5 </div>
+                            <div class="item-1" id="i6"> 6 </div>
+                            <div class="item-1" id="i7"> 7 </div>
+                            <div class="item-1" id="i8"> 8 </div>
+                        </div>
+                        <p><span class="special">justify-content: space-between;</span></p>
+                        <div class="container-1 container-jc-between">
+                            <div class="item-1" id="i1"> 1 </div>
+                            <div class="item-1" id="i2"> 2 </div>
+                            <div class="item-1" id="i3"> 3 </div>
+                            <div class="item-1" id="i4"> 4 </div>
+                            <div class="item-1" id="i5"> 5 </div>
+                            <div class="item-1" id="i6"> 6 </div>
+                            <div class="item-1" id="i7"> 7 </div>
+                            <div class="item-1" id="i8"> 8 </div>
+                        </div>
+                        <small><a class="fragment navigate-down">Go down to know more on justify-content</a></small>
+                    </section>
+                    <section>
+                        <p>Now, you see that how <span class="special">justify-content</span> helps you arrange the 
+                        <span class="special">flex-items</span> along the <span class="special">main-axis</span></p>
+
+                       <p class="fragment"> 
+                           I think it is not required for me to further explain what all the five properties of
+                           <span class="special">justify-content</span> do. Try it on your own. See, what are they.
+                           And even if you don't remember, don't worry.
+                        </p>
+                        <br>
+                        <h6 class="fragment" style="margin:0;padding:0;">TASK:</h6>
+                        <p class="fragment" style="margin:0;padding:0;">
+                            In the <span class="special">3-flexbox.html</span>
+                            file, change the <span class="special">flex-direction</span> of the <span class="special">flex-container</span>
+                            to <code class="code">flex-direction: column;</code>. Now try to implement <span class="special">justify-content</span>
+                            5 properties to the container.
+                        </p>
+                        <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+                    </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h3>align-content</h3>
+                    <p>
+                        Similar to the <span class="special">justify-content</span> is another flex-box property
+                        called <span class="special">align-content</span>.
+                    </p>
+                    <p class="fragment">
+                        As <code class="code">justify-content</code> works along the <span class="special">"main-axis"</span>,
+                        in a similar fashion, <br><code class="code">align-content</code> works along the <span class="special">"cross-axis"</span>
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see align-content values</a></small>
+                </section>
+                <section>
+                    <p><span class="special">align-content</span> has similar values to that of justify-content with a extra value:</p>
+                    <ul style="font-size:0.8em;">
+                        <li>flex-start (default value)</li>
+                        <li>flex-end</li>
+                        <li>center</li>
+                        <li>space-around</li>
+                        <li>space-between</li>
+                        <li>stretch</li>
+                    </ul>
+                    <p class="fragment">
+                        <span class="special">stretch</span> basically stretches
+                        all the elements' <span class="special">height</span> to 
+                        fill the maximum available height of the parent element.
+                    </p>
+                    <small><a class="fragment navigate-down">Go down to see how this works</a></small>
+                </section>
+                <section>
+                  <p>Change the following CSS in the <span class="special">style</span> element :</p>
+                  <pre><code>
+&lt;style&gt;
+    .container{
+        ...
+        align-content: flex-end;
+        min-height: 50vh;
+        flex-wrap: wrap;
+    }
+
+    .item{
+        ...
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    ....
+    ...
+&lt;/style&gt;
+                  </code></pre>
+                  <p>Now check out the preview in the browser. <span class="special">min-height </span>
+                     is the minimum height of the element & <span class="special">flex-wrap</span> will be 
+                    discussed next</p> 
+                </section>
+                <section>
+                    <p>Preview for the above code (<code class="code">justify-content: flex-start;</code> & 
+                        <code class="code">align-content: flex-end;</code>):</p>     
+                        <div class="container-1 align-end">
+                            <div class="item-1 item-align" id="i1"> 1 </div>
+                            <div class="item-1 item-align" id="i2"> 2 </div>
+                            <div class="item-1 item-align" id="i3"> 3 </div>
+                            <div class="item-1 item-align" id="i4"> 4 </div>
+                            <div class="item-1 item-align" id="i5"> 5 </div>
+                            <div class="item-1 item-align" id="i6"> 6 </div>
+                            <div class="item-1 item-align" id="i7"> 7 </div>
+                            <div class="item-1 item-align" id="i8"> 8 </div>
+                        </div>   
+                        <p><code class="code">justify-content: space-around;</code> & <code class="code">align-content: space-between;</code></p>           
+                        <div class="container-1 container-jc-around align-between">
+                            <div class="item-1 item-align" id="i1"> 1 </div>
+                            <div class="item-1 item-align" id="i2"> 2 </div>
+                            <div class="item-1 item-align" id="i3"> 3 </div>
+                            <div class="item-1 item-align" id="i4"> 4 </div>
+                            <div class="item-1 item-align" id="i5"> 5 </div>
+                            <div class="item-1 item-align" id="i6"> 6 </div>
+                            <div class="item-1 item-align" id="i7"> 7 </div>
+                            <div class="item-1 item-align" id="i8"> 8 </div>
+                        </div> 
+                </section>
+                <section>
+                    <p>That's it for align-content for now. Try out various combinations of align-content and justify-content.</p>
+                    <p>Also wait for some more lessons. I will give you a fantastic flexbox exercise to practice all of these.</p>
+                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+                </section>
+            </section>
+
+            <section>
+               <section>
+                   <h3>flex-wrap</h3>
+                   <p class="fragment">
+                        Next property is a very important one. <span class="special">flex-wrap</span>. 
+                        We have already used flex-wrap in our flex-container. <span class="special">flex-wrap</span> basically 
+                        has two values: 
+                   </p>
+                   <ul style="font-size:0.8em;" class="fragment">
+                       <li>nowrap (default value)</li>
+                       <li>wrap</li>                       
+                   </ul>
+                   <p class="fragment">
+                       Nowrap means that the <span class="special">flex-container</span> won't wrap the flex-items in case the
+                        total length of all the <span class="special">flex-items</span> exceed the width of the container.
+                    </p>          
+                    <div class="container-1 container-jc-around align-end fragment" style="flex-wrap:nowrap;">
+                        <div class="item-1 item-align" id="i1"> 1 </div>
+                        <div class="item-1 item-align" id="i2"> 2 </div>
+                        <div class="item-1 item-align" id="i3"> 3 </div>
+                        <div class="item-1 item-align" id="i4"> 4 </div>
+                        <div class="item-1 item-align" id="i5"> 5 </div>
+                        <div class="item-1 item-align" id="i6"> 6 </div>
+                        <div class="item-1 item-align" id="i7"> 7 </div>
+                        <div class="item-1 item-align" id="i8"> 8 </div>
+                    </div> 
+                    <small><a class="fragment navigate-down">Go down to know see the same code with wrap</a></small>
+               </section>
+               <section>
+                    <p>With <code class="code">flex-wrap: wrap;</code>:</p>
+                    <div class="container-1 container-jc-around align-end fragment" >
+                            <div class="item-1 item-align" id="i1"> 1 </div>
+                            <div class="item-1 item-align" id="i2"> 2 </div>
+                            <div class="item-1 item-align" id="i3"> 3 </div>
+                            <div class="item-1 item-align" id="i4"> 4 </div>
+                            <div class="item-1 item-align" id="i5"> 5 </div>
+                            <div class="item-1 item-align" id="i6"> 6 </div>
+                            <div class="item-1 item-align" id="i7"> 7 </div>
+                            <div class="item-1 item-align" id="i8"> 8 </div>
+                    </div> 
+                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+               </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Flex-Item properties</h3>
+                    <p>
+                        We were till now solely focused on the flex-container CSS properties. There are two prominent 
+                        CSS properties for flex-item which we will use a lot.
+                    </p>
+                    <ul class="fragment" style="font-size:0.8em;">
+                        <li>flex-grow / flex</li>
+                        <li>align-self</li>
+                    </ul>
+                    <p class="fragment">
+                        The <span class="special">flex-grow</span> determines the width/height of the particular flex-item.
+                        While <span class="special">align-self</span> tells us where the particular element should be positioned.
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see more about flex-grow</a>
+                    </small>
+                </section>
+                <section>
+                    <h3>Flex-grow / flex</h3>
+                    <p> <span class="special">flex-grow</span> determines the length of the flex-item along the main-axis.</p>
+                    <p class="fragment">Let's modify the style element in <span class="special">3-flexbox.html</span> file a little bit.</p>
+                    <pre class="fragment"><code>
+&lt;style>
+        body{
+            margin:0;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            min-height:50vh;
+            /* align-items: center; */
+            align-content: flex-end;
+            width: 100vw;
+            flex-wrap: wrap;
+            background-color: #000;
+        }
+    
+        .item {
+            color: #fff;
+            font-size: 3em;
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+    
+        #i1{
+            background-color: #ff0000;
+            flex-grow: 1;
+        }
+        #i2{background-color: #ff7c00;}
+        #i3{
+            background-color: #fff700;
+            flex-grow: 2;
+        }
+        #i4{background-color: #64ff00;}
+        #i5{background-color: #00ff8b;}
+        #i6{background-color: #0070ff;}
+        #i7{background-color: #0f00ff;}
+        #i8{background-color: #d100ff;}
+&gt;/style>
+                    </code></pre>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see more</a>
+                    </small>
+                </section>
+                <section>
+                    <p>
+                        We made special changes to the style of elements with <span class="special">id:</span> 
+                        <code class="code">i1</code> & 
+                        <code class="code">i3</code>
+                    </p>
+                    <p class="fragment">
+                        Notice that the length of these two elements grow and the length of <span class="special">i3</span> is greater than 
+                        <span class="special">i1</span>.
+                    </p>
+                    <p class="fragment">
+                        <span class="special">NOTE:</span> The default value of <span class="special">flex-grow</span>
+                        is <span class="special">0</span>. These elements with <code class="code">flex-grow:0</code> will retain 
+                        their original size. While the ones with a number greater than 0 will increase and take up rest of the 
+                        space left in the flex-container.
+                    </p>
+                    <small>
+                        <a class="fragment navigate-down">Go down to see more on flex-grow</a>
+                    </small>
+                </section>
+                <section>
+                    <p>
+                        So, the calculation goes like this: <br>
+                        In our example the flex-items with <span class="special">flex-grow > 0</span> are <span class="special">i1 & i3</span>.
+                    </p>
+                    <p class="fragment">
+                        So, <span class="special">i1</span> will take up 1 / 1+0+2+0+0+0+0+0 = <span class="special">1/3</span> of the remaining space.<br>
+                        & <span class="special">i2</span> will take 2 / 1+2+0+0+.. = <span class="special">2/3</span> of the remaining space along the main-axis.
+                    </p>
+                    <p class="fragment">That's about it. You will get hold of this once we apply it to a project.</p>                   
+                    <small>
+                        <a class="fragment navigate-down">Go down to see more about align-self.</a>
+                    </small>
+                </section>
+                <section>
+                    <p><span class="special">align-self</span> is similar to align-content but it only applies to a 
+                    <span class="special">particular</span> flex-item instead of all the flex-items.</p>
+                    <p class="fragment">You have to declare this style property inside the flex-item CSS. Its values are:</p>
+                    <ul class="fragment" style="font-size:0.8em;">
+                        <li><b>auto (default)</b> -> basically has alignment declared in flex-container</li>
+                        <li><b>flex-start</b> -> aligns a flex-item to the <span class="special">start</span> of the main-axis</li>
+                        <li><b>flex-end</b> -> aligns a flex-item to the <span class="special">end</span> of the main-axis</li>
+                        <li><b>center</b> -> aligns a flex-item to the <span class="special">center</span> of the main-axis</li>
+                        <li><b>stretch</b> -> stretches a flex-item to the container's full length along cross-axis</li>
+                        <li><b>baseline</b></li>     
+                    </ul>
+                    <small><a class="fragment navigate-right">Hit Right Arrow to navigate to Next Slide </a></small>
+                </section>
+            </section>
+
+            <section>
+                    <h3>Flexbox practice & reference.</h3>
+                    <p>
+                        Hope you have been keeping the bookmarks in your browser we mentioned before. One more bookmark to keep is this:<br/>
+                        <a target="_blank" href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties#toc-flex-basis">https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties#toc-flex-basis</a>
+                    </p>
+                    <p class="fragment">
+                       Refer to this wonderful guide whenever you are stuck with Flex-Box. It takes time to get hold of things in flex-box.
+                    </p>
+                    <div class="fragment">
+                        <h6 >PRACTICE</h6>
+                        <p>There will be a lot of Flexbox involved in future lessons and I couldn't find a better practice guide/game to flexbox than <a target="_blank" href="http://flexboxfroggy.com/">FlexBox Froggy</a>.
+                            Please complete this and move forward. Otherwise it will be very tough for you in the future lessons: <br>
+                        <a target="_blank" href="http://flexboxfroggy.com/">Click here to start FlexBox Froggy</a>
+                        </p>
+                    </div>
+            </section>
+
+            <section>
+               
+                    <p>Hope you have completed <a href="http://flexboxfroggy.com/">Flexbox Froggy</a></p>
+                    <p>Our next lesson will be using <span class="special">CSS Media Queries</span>. This is a very important aspect of CSS programming as it helps
+                        us make our website <span class="special">mobile and tablet</span> friendly. <br/><br/>This process of using 
+                        media-queries to make websites is popularly called
+                        <span class="special">Responsive Web Design</span> (Website response with size of the screen)
+                    </p>
+                    <small><a class="fragment navigate-right">Hit Right Arrow to learn more on Media-Queries </a></small>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Media Queries</h3>
+                    <p>This is the last part for today's tutorial.</p>
+                    <p class="fragment">Start by making a new file: <span class="special">4-media-queries.html</span>  and make the file ready for writing your code.</p>
+                    <p class="fragment">Open the file in VS Code and add the <span class="special">style</span> element inside the <span class="special">head</span> element.</p>
+                    <small><a class="fragment navigate-down">Go down to continue learning Media Queries.</a></small>
+                </section>    
+                <section>
+                    <p>Add the following code to your file:</p>
+                    <pre><code>
+&lt;style>
+    .mobile{ color: grey;  }
+    .tablet { color: grey;  }
+    .desktop { color: grey;  }
+    
+    @media screen and (max-width: 424px) {
+        .mobile{ color: red;  }
+        .tablet { color: lightcyan;  }
+        .desktop { color: lightcyan;  }
+    }
+
+    @media screen and (min-width: 425px) {
+        .mobile{ color: lightcyan;  }
+        .tablet { color: red;  }
+        .desktop { color: lightcyan;  }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .mobile{ color: lightcyan;  }
+        .tablet { color: lightcyan;  }
+        .desktop { color: red;  }
+    }
+&lt;/style>
+
+&lt;body>
+    <h2 class="mobile">While in Mobile Phones</h2>
+    <h2 class="tablet">While in Tablets</h2>
+    <h2 class="desktop">While in Desktops</h2>
+&lt;/body>
+                    </code></pre>
+                    <p class="fragment">Save the file and open it in your browser.</p>
+                    <p class="fragment">
+                        In the browser, press <code class="code">F12</code> first and then 
+                        <code class="code">Ctrl+Shift+M</code> while you are viewing <span class="special">4-media-queries.html</span>
+                    </p>
+                   <small><a class="fragment navigate-down">Go down to know more about media-queries</a></small>
+                </section>           
+                <section>
+                    <p class="fragment">
+                        A smaller view of the website will be shown to you. This is what actually your website will 
+                        look like in a mobile. You don't need a mobile for that. Its all here in Chrome/Firefox.
+                    </p>
+                    <img src="images/chrome.jpg" width="900" style="border:none;" class="fragment" height="auto" alt="Chrome Dev Tools">
+                    <small><a class="fragment navigate-down">Go down to know more</a></small>
+                </section>
+                <section>
+                    <p>Click on this bar shown below in browser to change between different screen sizes:</p>
+                    <img src="images/chrome2.jpg" width="900" style="border:none;" height="auto" alt="Chrome Dev Tools">
+                    <p style="font-size:0.5em !important;">You will see the color change to red of different texts according to screen sizes. That's what media queries do!</p>
+                </section>
+                <section>
+                    <h4>Explaining the code:</h4>
+                    <p>The code is pretty simple:</p>
+                    <p><code class="code">@media-query screen and (max-width: 424px){...</code></p>
+                    <p>
+                        This line means that when the screen size has a width of 424px or below, <span class="special">activate</span>
+                        the styles below between {...}. 
+                    </p>
+                    <pre><code>
+@media screen and (max-width: 424px) {
+    .mobile{ color: red;  }
+    .tablet { color: lightcyan;  }
+    .desktop { color: lightcyan;  }
+}                       
+                    </code></pre>
+                    <p>This means when screen has a size of 424px or below, change the style of <span class="special">.mobile</span> class
+                     to <code class="code">color:red;</code> and the styles of other two classes to <code class="code">color:lightcyan;</code></p>
+                    <small><a class="fragment navigate-down">Go down to know more on Media Queries</a></small>
+                </section>
+                <section>
+                    <p>So, same is the case for both the other two <code class="code">@media screen and (min-width:px){...}</code></p>
+                    <p class="fragment">That's all there is know about Media queries. We shall use them in plenty to know how these function in tomorrow's lesson.</p>
+                </section>
+            </section>
+
+            <section>
+                <h3>Time to upload your repository to Github!</h3>
+                <p>
+                    Like the end of similar tutorial in yesterday's lesson, we are going to upload the new changes to 
+                    our repo: <span class="special">2-html-css-code-empire</span>. So, if you well remember how to upload the files to 
+                    GitHub do it. Or open the previous lesson and see how.
+                </p>
+            </section>
+            <section>
+                <h3>Finished Flexbox model and Media Queries (DAY 5):</h3>
+                <p>
+                    We just completed Flexbox and media queries. These are very important CSS featues. 
+                    Next we will be learning on how to make a CSS Grid Library. Its a practical lesson and will be fun!
+                </p>
+                <p class="fragment">
+                    After making our CSS Grid we will greatly speed up our HTML/CSS skills. If you still haven't done 
+                    <a href="http://flexboxfroggy.com/">Flexbox Froggy</a>, don't proceed further as it will be very tough for you to understand otherwise.
+                </p>
+                <p class="fragment">
+                    I have mentioned only important features of Flexbox in today's lessons which we will be using a lot.
+                    So, don't forget to Google or check out this <a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">Flexbox guide</a> for reference.
+                </p>
+            </section>
+            <section>
+                    <h3>HELP</h3>
+                    <p>If you are facing any problems with these HTML/CSS tutorials please ask them on<a href="https://gitter.im/The-Code-Empire-Help/HTML-CSS">The Code Empire Gitter HTML/CSS Help.</a>                    Ask your queries there. </p>
+                </section>
+                <section>
+                    <h3>Finished HTML/CSS Part 3 (Day 5)!</h3>
+                    <p>In the next tutorial we will be creating a CSS Grid.
+                    </p>
+                    <p>That is all for today. Let's start Day 6 and continue with HTML/CSS.
+                    </p>
+                    <p>Click <a href="">HERE</a> for our next lesson</p>
+                    <p>Click <a href="">HERE</a> for our the course map</p>
+                </section>
+
+        </div>
+    </div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            dependencies: [{
+                    src: 'js/markdown/marked.js'
+                },
+                {
+                    src: 'js/markdown/markdown.js'
+                },
+                {
+                    src: 'js/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'js/zoom.js',
+                    async: true
+                },
+                {
+                    src: 'js/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
+
+</html>
